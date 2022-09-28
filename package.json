@@ -39,6 +39,8 @@
         "node-red-node-email": "latest",
         "node-red-contrib-twitter": "latest",
         "node-red-contrib-spotify": "latest",
+        "node-red-node-aws": "latest",
+        "node-red-contrib-simple-aws": "latest",
         "redis": "3.0.2",
         "when": "3.7.8"
     }

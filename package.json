@@ -37,6 +37,8 @@
         "node-red-contrib-mongoql":"latest",
         "node-red-node-dropbox": "latest",
         "node-red-node-email": "latest",
+        "node-red-contrib-twitter": "latest",
+        "node-red-contrib-spotify": "latest",
         "redis": "3.0.2",
         "when": "3.7.8"
     }

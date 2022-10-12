@@ -2,7 +2,15 @@
     {
         "id": "3c1975f87cd0cabf",
         "type": "tab",
-        "label": "Home & SAVE",
+        "label": "Home",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7874accc860ddc72",
+        "type": "tab",
+        "label": "Admin",
         "disabled": false,
         "info": "",
         "env": []
@@ -11,7 +19,7 @@
         "id": "1f0274a4dfdeb367",
         "type": "tab",
         "label": "File explorer",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -185,44 +193,23 @@
         }
     },
     {
-        "id": "b0eb4adfc225fb72",
+        "id": "5c9e1b5f42fe7e63",
         "type": "group",
-        "z": "3c1975f87cd0cabf",
-        "name": "Keep alive",
-        "style": {
-            "label": true,
-            "fill": "#ffefbf"
-        },
-        "nodes": [
-            "5d337cc743daabe8",
-            "ae4957f5ee3d888a",
-            "6cb59b76640ae895",
-            "4feed037ddca9c42",
-            "13a6831524e909e7"
-        ],
-        "x": 514,
-        "y": 419,
-        "w": 192,
-        "h": 162
-    },
-    {
-        "id": "f936a74110b9b914",
-        "type": "group",
-        "z": "3c1975f87cd0cabf",
+        "z": "7874accc860ddc72",
         "name": "Home page",
         "style": {
             "label": true,
             "fill": "#bfdbef"
         },
         "nodes": [
-            "f70e898b397aef10",
-            "f171534d604cc112",
-            "5335834859daab27",
-            "843913bce817f7ea",
-            "3770ad66feb3d486"
+            "193419dc704fcf96",
+            "c41587aafb6df678",
+            "e2266ddcab30367a",
+            "565e343c84ad7918",
+            "a56190b8599aca17"
         ],
         "x": 34,
-        "y": 419,
+        "y": 259,
         "w": 392,
         "h": 162
     },
@@ -433,522 +420,10 @@
         "icon": "font-awesome/fa-table"
     },
     {
-        "id": "9c09e087.a48e7",
-        "type": "http request",
-        "z": "3c1975f87cd0cabf",
-        "name": "PUT (GitHub)",
-        "method": "PUT",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "https://api.github.com/repos/hybuild-project/nodered-heroku/contents/{{filename}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 620,
-        "y": 280,
-        "wires": [
-            [
-                "b481381501d2b414"
-            ]
-        ]
-    },
-    {
-        "id": "1dc8605f.7ac4e",
-        "type": "change",
-        "z": "3c1975f87cd0cabf",
-        "name": "set headers",
-        "rules": [
-            {
-                "t": "set",
-                "p": "headers",
-                "pt": "msg",
-                "to": "{\"User-Agent\":\"Node-RED\"}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "headers.Authorization",
-                "pt": "msg",
-                "to": "AUTHORIZATION_HEADER",
-                "tot": "env"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 870,
-        "y": 220,
-        "wires": [
-            [
-                "9c09e087.a48e7"
-            ]
-        ]
-    },
-    {
-        "id": "ba9ea225.c2fbe",
-        "type": "http request",
-        "z": "3c1975f87cd0cabf",
-        "name": "GET (GitHub)",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "https://api.github.com/repos/hybuild-project/nodered-heroku/contents/{{filename}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 620,
-        "y": 100,
-        "wires": [
-            [
-                "c153c93bfd0eede3",
-                "e585584fd416aab4"
-            ]
-        ]
-    },
-    {
-        "id": "ae8ddf10.868fd",
-        "type": "change",
-        "z": "3c1975f87cd0cabf",
-        "name": "set msg.headers",
-        "rules": [
-            {
-                "t": "set",
-                "p": "headers.User-Agent",
-                "pt": "msg",
-                "to": "Node-RED",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "headers.Authorization",
-                "pt": "msg",
-                "to": "AUTHORIZATION_HEADER",
-                "tot": "env"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 40,
-        "wires": [
-            [
-                "ba9ea225.c2fbe"
-            ]
-        ]
-    },
-    {
-        "id": "819e400b.96d61",
-        "type": "comment",
-        "z": "3c1975f87cd0cabf",
-        "name": "GitHub Token",
-        "info": "Set GITHUB_TOKEN in [Heroku Config Vars](https://dashboard.heroku.com/apps/nodered-in-cloud/settings).\nSee [Personal access tokens](https://github.com/settings/tokens) page (repo).",
-        "x": 370,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "b481381501d2b414",
-        "type": "debug",
-        "z": "3c1975f87cd0cabf",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 870,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "f4f0342516f4afea",
-        "type": "file in",
-        "z": "3c1975f87cd0cabf",
-        "name": "",
-        "filename": "",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 860,
-        "y": 160,
-        "wires": [
-            [
-                "6a2bc486f2838313"
-            ]
-        ]
-    },
-    {
-        "id": "c153c93bfd0eede3",
-        "type": "debug",
-        "z": "3c1975f87cd0cabf",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 870,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "e585584fd416aab4",
-        "type": "change",
-        "z": "3c1975f87cd0cabf",
-        "name": "",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.sha",
-                "pt": "msg",
-                "to": "temp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 650,
-        "y": 160,
-        "wires": [
-            [
-                "f4f0342516f4afea"
-            ]
-        ]
-    },
-    {
-        "id": "6a2bc486f2838313",
-        "type": "change",
-        "z": "3c1975f87cd0cabf",
-        "name": "set msg.payload",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"content\": $base64encode(payload)}",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload.sha",
-                "pt": "msg",
-                "to": "temp",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload.message",
-                "pt": "msg",
-                "to": "Commit from nodered-on-cloud",
-                "tot": "str"
-            },
-            {
-                "t": "delete",
-                "p": "temp",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 220,
-        "wires": [
-            [
-                "1dc8605f.7ac4e"
-            ]
-        ]
-    },
-    {
-        "id": "bc604bc3fb7cfdf7",
-        "type": "inject",
-        "z": "3c1975f87cd0cabf",
-        "name": "check env var",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "${AUTHORIZATION_HEADER}",
-        "payloadType": "str",
-        "x": 870,
-        "y": 40,
-        "wires": [
-            [
-                "c153c93bfd0eede3"
-            ]
-        ]
-    },
-    {
-        "id": "f92e1e8dffe158f7",
-        "type": "change",
-        "z": "3c1975f87cd0cabf",
-        "name": "flows.json",
-        "rules": [
-            {
-                "t": "set",
-                "p": "filename",
-                "pt": "msg",
-                "to": "flows.json",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 360,
-        "y": 120,
-        "wires": [
-            [
-                "ae8ddf10.868fd"
-            ]
-        ]
-    },
-    {
-        "id": "98b5b9035834b822",
-        "type": "change",
-        "z": "3c1975f87cd0cabf",
-        "name": "flows_cred.json",
-        "rules": [
-            {
-                "t": "set",
-                "p": "filename",
-                "pt": "msg",
-                "to": "flows_cred.json",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 380,
-        "y": 160,
-        "wires": [
-            [
-                "ae8ddf10.868fd"
-            ]
-        ]
-    },
-    {
-        "id": "7a7584df89bbce4a",
-        "type": "inject",
-        "z": "3c1975f87cd0cabf",
-        "name": "SAVE ALL",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 120,
-        "y": 40,
-        "wires": [
-            [
-                "f92e1e8dffe158f7",
-                "98b5b9035834b822",
-                "71c40b7254660299"
-            ]
-        ]
-    },
-    {
-        "id": "354462253c0f942f",
-        "type": "inject",
-        "z": "3c1975f87cd0cabf",
-        "name": "SAVE",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 110,
-        "y": 120,
-        "wires": [
-            [
-                "f92e1e8dffe158f7"
-            ]
-        ]
-    },
-    {
-        "id": "a549d342fd99909d",
-        "type": "inject",
-        "z": "3c1975f87cd0cabf",
-        "name": "SAVE",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 110,
-        "y": 160,
-        "wires": [
-            [
-                "98b5b9035834b822"
-            ]
-        ]
-    },
-    {
-        "id": "2d16cee553d899ee",
-        "type": "inject",
-        "z": "3c1975f87cd0cabf",
-        "name": "SAVE",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 110,
-        "y": 200,
-        "wires": [
-            [
-                "71c40b7254660299"
-            ]
-        ]
-    },
-    {
-        "id": "71c40b7254660299",
-        "type": "change",
-        "z": "3c1975f87cd0cabf",
-        "name": "package.json",
-        "rules": [
-            {
-                "t": "set",
-                "p": "filename",
-                "pt": "msg",
-                "to": "package.json",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 370,
-        "y": 200,
-        "wires": [
-            [
-                "ae8ddf10.868fd"
-            ]
-        ]
-    },
-    {
-        "id": "5d337cc743daabe8",
-        "type": "http request",
-        "z": "3c1975f87cd0cabf",
-        "d": true,
-        "g": "b0eb4adfc225fb72",
-        "name": "GET /ping",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "https://nodered-on-cloud.herokuapp.com",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 620,
-        "y": 540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ae4957f5ee3d888a",
-        "type": "inject",
-        "z": "3c1975f87cd0cabf",
-        "d": true,
-        "g": "b0eb4adfc225fb72",
-        "name": "",
-        "props": [],
-        "repeat": "600",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 610,
-        "y": 460,
-        "wires": [
-            [
-                "5d337cc743daabe8"
-            ]
-        ]
-    },
-    {
-        "id": "6cb59b76640ae895",
-        "type": "comment",
-        "z": "3c1975f87cd0cabf",
-        "g": "b0eb4adfc225fb72",
-        "name": "(alt) Cron-job",
-        "info": " - [Cron-job](https://console.cron-job.org/) is a general-purpose alternative\n - Create custom cron-based job\n - Headers and HTTP methods selectable",
-        "x": 610,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "4feed037ddca9c42",
-        "type": "comment",
-        "z": "3c1975f87cd0cabf",
-        "g": "b0eb4adfc225fb72",
-        "name": "App Scripts",
-        "info": " - Script set in [Google App Scripts](https://script.google.com/home/)\n - Login with hybuild.project@gmail.com\n - Time check in code to bypass 0.00-6.00\n\n<pre>\nfunction awake() {\n  if (new Date().getUTCHours() > 6)\n    return UrlFetchApp.fetch(\"https://nodered-on-cloud.herokuapp.com/\");\n}\n</pre>",
-        "x": 610,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "13a6831524e909e7",
-        "type": "comment",
-        "z": "3c1975f87cd0cabf",
-        "g": "b0eb4adfc225fb72",
-        "name": "(alt) Kaffeine",
-        "info": " - [Kaffeine](https://kaffeine.herokuapp.com/) keeps alive Heroku dynos\n - Every 30 minutes from 6.00 to 23.59\n - Heroku free dyno limit: 550 hours/mounth",
-        "x": 610,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "f70e898b397aef10",
+        "id": "193419dc704fcf96",
         "type": "ui_template",
-        "z": "3c1975f87cd0cabf",
-        "g": "f936a74110b9b914",
+        "z": "7874accc860ddc72",
+        "g": "5c9e1b5f42fe7e63",
         "group": "926d6874.375768",
         "name": "Body",
         "order": 4,
@@ -961,16 +436,16 @@
         "templateScope": "local",
         "className": "",
         "x": 110,
-        "y": 500,
+        "y": 340,
         "wires": [
             []
         ]
     },
     {
-        "id": "f171534d604cc112",
+        "id": "c41587aafb6df678",
         "type": "ui_template",
-        "z": "3c1975f87cd0cabf",
-        "g": "f936a74110b9b914",
+        "z": "7874accc860ddc72",
+        "g": "5c9e1b5f42fe7e63",
         "group": "926d6874.375768",
         "name": "Head",
         "order": 1,
@@ -983,16 +458,16 @@
         "templateScope": "global",
         "className": "",
         "x": 110,
-        "y": 460,
+        "y": 300,
         "wires": [
             []
         ]
     },
     {
-        "id": "5335834859daab27",
+        "id": "e2266ddcab30367a",
         "type": "ui_template",
-        "z": "3c1975f87cd0cabf",
-        "g": "f936a74110b9b914",
+        "z": "7874accc860ddc72",
+        "g": "5c9e1b5f42fe7e63",
         "group": "926d6874.375768",
         "name": "CSS",
         "order": 2,
@@ -1005,16 +480,16 @@
         "templateScope": "local",
         "className": "",
         "x": 350,
-        "y": 540,
+        "y": 380,
         "wires": [
             []
         ]
     },
     {
-        "id": "843913bce817f7ea",
+        "id": "565e343c84ad7918",
         "type": "ui_template",
-        "z": "3c1975f87cd0cabf",
-        "g": "f936a74110b9b914",
+        "z": "7874accc860ddc72",
+        "g": "5c9e1b5f42fe7e63",
         "group": "926d6874.375768",
         "name": "Footer",
         "order": 6,
@@ -1027,16 +502,16 @@
         "templateScope": "local",
         "className": "",
         "x": 110,
-        "y": 540,
+        "y": 380,
         "wires": [
             []
         ]
     },
     {
-        "id": "3770ad66feb3d486",
+        "id": "a56190b8599aca17",
         "type": "ui_template",
-        "z": "3c1975f87cd0cabf",
-        "g": "f936a74110b9b914",
+        "z": "7874accc860ddc72",
+        "g": "5c9e1b5f42fe7e63",
         "group": "926d6874.375768",
         "name": "Links",
         "order": 7,
@@ -1049,10 +524,302 @@
         "templateScope": "local",
         "className": "",
         "x": 230,
-        "y": 540,
+        "y": 380,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "2a69610a9bc4a781",
+        "type": "file",
+        "z": "7874accc860ddc72",
+        "name": "",
+        "filename": "save.js",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 590,
+        "y": 80,
+        "wires": [
+            [
+                "9484807fc89567ee"
+            ]
+        ]
+    },
+    {
+        "id": "89fb7dc02f33e098",
+        "type": "inject",
+        "z": "7874accc860ddc72",
+        "name": "SAVE",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "04e3fbda718f0df9"
+            ]
+        ]
+    },
+    {
+        "id": "9484807fc89567ee",
+        "type": "exec",
+        "z": "7874accc860ddc72",
+        "command": "node save.js",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 770,
+        "y": 80,
+        "wires": [
+            [
+                "40055bc4d98525a6"
+            ],
+            [
+                "40055bc4d98525a6"
+            ],
+            [
+                "40055bc4d98525a6"
+            ]
+        ]
+    },
+    {
+        "id": "40055bc4d98525a6",
+        "type": "debug",
+        "z": "7874accc860ddc72",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 990,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "04e3fbda718f0df9",
+        "type": "wysiwyg",
+        "z": "7874accc860ddc72",
+        "name": "",
+        "text": "<p>const {S3Client} = require('@aws-sdk/client-s3'); </p><p>const S3SyncClient = require('s3-sync-client');</p><p><br></p><p>const key_id =&nbsp;process.env.BUCKETEER_AWS_ACCESS_KEY_ID </p><p>const key =&nbsp;process.env.BUCKETEER_AWS_SECRET_ACCESS_KEY </p><p>const region =&nbsp;process.env.BUCKETEER_AWS_REGION</p><p>const bucket = process.env.BUCKETEER_BUCKET_NAME&nbsp; &nbsp; &nbsp;</p><p>const name = process.env.NODE_RED_USERNAME</p> <p><br></p><p> save(); </p><p><br></p><p> async function save() { </p><p>&nbsp; &nbsp;const s3Client = new S3Client( { region: region, credentials: { accessKeyId: key_id, secretAccessKey: key }} ) </p><p>&nbsp; &nbsp;const {sync} = new S3SyncClient({ client: s3Client })</p><p>&nbsp; &nbsp;await sync( '/app', 's3://'+bucket+'/'+name,&nbsp;{\n    filters: [\n{ exclude: (key) =&gt; key.includes('/') }, { include: (key) =&gt; key.startsWith('public/') } ] }&nbsp;); </p><p>}</p>",
+        "field": "payload",
+        "fieldType": "msg",
+        "x": 260,
+        "y": 80,
+        "wires": [
+            [
+                "570b2e1bd6e4b22d"
+            ]
+        ]
+    },
+    {
+        "id": "570b2e1bd6e4b22d",
+        "type": "html-to-text",
+        "z": "7874accc860ddc72",
+        "name": "",
+        "x": 430,
+        "y": 80,
+        "wires": [
+            [
+                "2a69610a9bc4a781"
+            ]
+        ]
+    },
+    {
+        "id": "2d0bae6c7ec026f4",
+        "type": "wysiwyg",
+        "z": "7874accc860ddc72",
+        "name": "",
+        "text": "<p>const {S3Client} = require('@aws-sdk/client-s3')</p><p>const S3SyncClient = require('s3-sync-client')</p><p><br></p><p>\n</p><p>const key_id =&nbsp;process.env.BUCKETEER_AWS_ACCESS_KEY_ID </p><p>const key =&nbsp;process.env.BUCKETEER_AWS_SECRET_ACCESS_KEY </p><p>const region =&nbsp;process.env.BUCKETEER_AWS_REGION</p><p>const bucket = process.env.BUCKETEER_BUCKET_NAME&nbsp; &nbsp; &nbsp;</p><p>const name = process.env.NODE_RED_USERNAME</p><p>\n<br></p><p>restore()\n</p><p><br></p><p>async function restore() {  &nbsp; &nbsp; &nbsp; </p><p>&nbsp; &nbsp;const s3Client = new S3Client( { region: region, credentials: { accessKeyId: key_id, secretAccessKey: key }} ) </p><p>&nbsp; &nbsp;const {sync} = new S3SyncClient({ client: s3Client }); </p><p>&nbsp; &nbsp;await sync(  's3://'+bucket+'/'+name,&nbsp;'/app',&nbsp;{ relocations: [[name, '']] } ) </p><p>}</p><p><br></p>",
+        "field": "payload",
+        "fieldType": "msg",
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "1d02183cb13af568"
+            ]
+        ]
+    },
+    {
+        "id": "1d02183cb13af568",
+        "type": "html-to-text",
+        "z": "7874accc860ddc72",
+        "name": "",
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "fd76fec9c3e39aaf"
+            ]
+        ]
+    },
+    {
+        "id": "fd76fec9c3e39aaf",
+        "type": "file",
+        "z": "7874accc860ddc72",
+        "name": "",
+        "filename": "restore.js",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 600,
+        "y": 140,
+        "wires": [
+            [
+                "0c5adfe3cfcd4bf0"
+            ]
+        ]
+    },
+    {
+        "id": "0c5adfe3cfcd4bf0",
+        "type": "exec",
+        "z": "7874accc860ddc72",
+        "command": "node restore.js",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 780,
+        "y": 140,
+        "wires": [
+            [
+                "e24172438f9708d6"
+            ],
+            [
+                "e24172438f9708d6"
+            ],
+            [
+                "e24172438f9708d6"
+            ]
+        ]
+    },
+    {
+        "id": "e24172438f9708d6",
+        "type": "debug",
+        "z": "7874accc860ddc72",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 990,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "36838a7f591fa035",
+        "type": "inject",
+        "z": "7874accc860ddc72",
+        "name": "RESTORE",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "2d0bae6c7ec026f4"
+            ]
+        ]
+    },
+    {
+        "id": "c6201979db9972ef",
+        "type": "exec",
+        "z": "7874accc860ddc72",
+        "command": "npm i tiny",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 280,
+        "y": 200,
+        "wires": [
+            [
+                "f30cb701e656b1b1"
+            ],
+            [
+                "f30cb701e656b1b1"
+            ],
+            [
+                "f30cb701e656b1b1"
+            ]
+        ]
+    },
+    {
+        "id": "f30cb701e656b1b1",
+        "type": "debug",
+        "z": "7874accc860ddc72",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 510,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "c4797fe757262475",
+        "type": "inject",
+        "z": "7874accc860ddc72",
+        "name": "EXECUTE",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "c6201979db9972ef"
+            ]
+        ]
+    },
+    {
+        "id": "01dbd573c583dfb9",
+        "type": "comment",
+        "z": "7874accc860ddc72",
+        "name": "Todo",
+        "info": "put start.js into git\ntest heroku rebuilds\nTest public access to s3\nmove keys to environment?\nadd spotify\nadd twitter\nrotate bucket keys",
+        "x": 1210,
+        "y": 40,
+        "wires": []
     },
     {
         "id": "53035f704bb7e6be",

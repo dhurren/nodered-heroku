@@ -1,5 +1,5 @@
 
-const {execSync} = require('child_process')
+const {exec} = require('child_process')
 const {S3Client} = require('@aws-sdk/client-s3')
 const S3SyncClient = require('s3-sync-client')
 
@@ -18,5 +18,5 @@ async function restore() {       
   const {sync} = new S3SyncClient({ client: s3Client });  
   await sync(  's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']] } )
   
-  execSync( 'pm2-runtime start /app/node_modules/node-red/red.js -i 1 -- --settings /app/settings.js --userDir /app' )
+  exec( 'pm2-runtime start /app/node_modules/node-red/red.js -i 1 -- --settings /app/settings.js --userDir /app' )
 }

@@ -8,7 +8,6 @@ const key = process.env.BUCKETEER_AWS_SECRET_ACCESS_KEY
 const region = process.env.BUCKETEER_AWS_REGION
 const bucket = process.env.BUCKETEER_BUCKET_NAME     
 
-const instances = process.env.NODE_RED_INSTANCES || 1
 const name = process.env.NODE_RED_USERNAME  
 
 restore()
@@ -19,5 +18,5 @@ async function restore() {       
   const {sync} = new S3SyncClient({ client: s3Client });  
   await sync(  's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']] } )
   
-  execSync( 'pm2 start node_modules/node-red/red.js -i '+instances+' -- --settings ./settings.js --userDir ./' )
+  execSync( 'pm2 start node_modules/node-red/red.js -i 1 -- --settings ./settings.js --userDir ./' )
 }

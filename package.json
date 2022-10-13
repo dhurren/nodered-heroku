@@ -15,8 +15,7 @@
         "heroku"
     ],
     "dependencies": {
-        "feedparser": "2.2.10",
-        "nano": "8.2.2",
+        "pm2": "latest",
         "node-red": "latest",
         "node-red-contrib-string": "latest",
         "node-red-node-base64": "latest",
@@ -44,6 +43,8 @@
         "node-red-contrib-qrcode-generator": "latest",
         "node-red-contrib-wysiwyg": "latest",
         "node-red-html-to-text": "latest",
+        "feedparser": "2.2.10",
+        "nano": "8.2.2",
         "redis": "3.0.2",
         "when": "3.7.8",
         "@aws-sdk/client-s3": "latest",

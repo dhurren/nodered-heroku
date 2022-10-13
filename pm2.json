@@ -5,7 +5,7 @@
       "cwd"         : "/app",
       "args"        : "--settings /app/settings.js --userDir /app",
       "exec_mode"   : "cluster",
-      "instances"   : 8,
+      "instances"   : 4,
       "watch"       : false
     }]
 }

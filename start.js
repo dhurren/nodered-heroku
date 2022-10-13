@@ -18,5 +18,5 @@ async function restore() {       
   const {sync} = new S3SyncClient({ client: s3Client });  
   await sync(  's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']] } )
   
-  exec( 'pm2 start pm2.json' )
+  exec( 'pm2-runtime start pm2.json' )
 }

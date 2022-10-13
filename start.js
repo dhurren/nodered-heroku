@@ -18,5 +18,5 @@ async function restore() {       
   const {sync} = new S3SyncClient({ client: s3Client });  
   await sync(  's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']] } )
   
-  exec( 'pm2-runtime start /app/node_modules/node-red/red.js -i 1 -- --settings /app/settings.js --userDir /app' )
+  exec( 'pm2 start pm2.json' )
 }

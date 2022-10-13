@@ -2,8 +2,10 @@
     "apps" : [{
       "name"        : "node-red-wrapper",
       "script"      : "/app/node_modules/node-red/red.js",
-      "watch"       : false,
       "cwd"         : "/app",
-      "args"        : "--settings /app/settings.js --userDir /app"
+      "args"        : "--settings /app/settings.js --userDir /app",
+      "exec_mode"   : "cluster",
+      "instances"   : 8,
+      "watch"       : false
     }]
 }

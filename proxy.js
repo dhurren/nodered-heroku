@@ -19,8 +19,7 @@ var port1 = (parseInt(process.env.PORT) + 1)
 console.log( "port=" + port1 ) 
 
 const wsProxy = createProxyMiddleware( {
-    target: 'ws://localhost',
-    changeOrigin: true
+    target: 'ws://localhost/editor/comms', ws: true, changeOrigin: true
 });
 
 app.use( '/editor/comms', wsProxy );

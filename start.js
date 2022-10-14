@@ -18,11 +18,13 @@ async function restore() {       
   const {sync} = new S3SyncClient({ client: s3Client });  
   
   //put this back later **** filters are broken/syntax error *****
+  console.log( "Restoring data..." )
   //await sync(  's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']] } )
   //await sync( 's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']],
     //      filters: [ { exclude: (key) => key.includes('pm2.json') }, { exclude: (key) => key.includes('proxy.js') } ] } ) 
   
-  exec( 'pm2-runtime start pm2.json && pm2-runtime logs all' , (error, stdout, stderr) => {
+  console.log( "Starting pm2..." )
+  exec( 'pm2-runtime start pm2.json' , (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
       return;

@@ -16,7 +16,6 @@
           "args"           : "--settings /app/settings.js --userDir /app",
           "exec_mode"      : "fork",
           "instances"      : 1,
-          "increment_var"  : "PORT",
           "watch"          : false
          }
     ]

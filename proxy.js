@@ -18,9 +18,11 @@ var app = require('express')(); 
 var port1 = (parseInt(process.env.PORT) + 1) 
 console.log( "port=" + port1 ) 
 
-const wsProxy = createProxyMiddleware( {
-    target: 'ws://localhost/editor/comms', ws: true, changeOrigin: true
-});
+//const wsProxy = createProxyMiddleware( {
+//    target: 'ws://localhost/editor/comms', ws: true, changeOrigin: true
+//});
+
+const wsProxy = createProxyMiddleware({ pathFilter: '/', target: 'http://echo.websocket.org', ws: true });
 
 app.use( '/editor/comms', wsProxy );
 app.use( '/', proxy('http://localhost:'+port1+'/')); 

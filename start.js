@@ -21,5 +21,5 @@ async function restore() {       
   //await sync( 's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']],
     //      filters: [ { exclude: (key) => key.includes('pm2.json') }, { exclude: (key) => key.includes('proxy.js') } ] } ) 
   
-  exec( 'pm2-runtime start --no-daemon pm2.json && pm2-runtime logs all' )
+  exec( 'pm2-runtime start pm2.json && pm2-runtime logs all' )
 }

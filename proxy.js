@@ -20,7 +20,7 @@ console.log( "port=" + port1 )
 
 const wsProxy = createProxyMiddleware( {
     target: 'ws://localhost',
-    ws: true
+    changeOrigin: true
 });
 
 app.use( '/editor/comms', wsProxy );

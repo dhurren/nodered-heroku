@@ -7,7 +7,7 @@
           "args"           : "",
           "exec_mode"      : "fork",
           "instances"      : 1,
-          "watch"          : false,
+          "watch"          : false
          },
         {
           "name"           : "node-red",

@@ -7,16 +7,6 @@
           "args"           : "",
           "exec_mode"      : "fork",
           "watch"          : false
-         },
-        {
-          "name"           : "node-red",
-          "script"         : "/app/node_modules/node-red/red.js",
-          "cwd"            : "/app",
-          "args"           : "--settings /app/settings.js --userDir /app",
-          "instances"      : 3,
-          "exec_mode"      : "fork",
-          "increment_var"  : "PORT",
-          "watch"          : false
          }
     ]
 }

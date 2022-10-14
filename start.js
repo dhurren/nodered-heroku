@@ -17,9 +17,17 @@ async function restore() {       
   const s3Client = new S3Client( { region: region, credentials: { accessKeyId: key_id, secretAccessKey: key }} )
   const {sync} = new S3SyncClient({ client: s3Client });  
   
+  //put this back later **** filters are broken/syntax error *****
   //await sync(  's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']] } )
   //await sync( 's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']],
     //      filters: [ { exclude: (key) => key.includes('pm2.json') }, { exclude: (key) => key.includes('proxy.js') } ] } ) 
   
-  exec( 'pm2-runtime start pm2.json && pm2-runtime logs all' )
+  exec( 'pm2-runtime start pm2.json && pm2-runtime logs all' , (error, stdout, stderr) => {
+    if (error) {
+      console.error(`exec error: ${error}`);
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+    console.error(`stderr: ${stderr}`);
+  });
 }

@@ -23,8 +23,8 @@ const wsProxy = httpproxy( {
     ws: true
 });
 
-app.use( wsProxy );
-app.use('/', proxy('http://localhost:'+port1+'/')); 
+app.use( '/', wsProxy );
+app.use( '/', proxy('http://localhost:'+port1+'/')); 
 app.listen(process.env.PORT, function () { console.log("Proxy listening") } )
 
 

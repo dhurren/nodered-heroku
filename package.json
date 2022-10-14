@@ -16,6 +16,8 @@
     ],
     "dependencies": {
         "pm2": "latest",
+        "express": "latest",
+        "express-http-proxy": "latest",
         "node-red": "latest",
         "node-red-contrib-string": "latest",
         "node-red-node-base64": "latest",

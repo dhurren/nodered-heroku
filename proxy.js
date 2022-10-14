@@ -18,7 +18,7 @@ var port1 = (parseInt(process.env.PORT) + 1)
 console.log( "port=" + port1 ) 
 
 var app = express();
-var proxy = httpProxy.createProxyServer({ target: 'http://localhost:'+port1+'/', ws: true });
+var proxy = httpProxy.createProxyServer({ target: 'https://enjine.cloud/', ws: true });
 var server = require('http').createServer(app);
 
 // proxy HTTP GET / POST

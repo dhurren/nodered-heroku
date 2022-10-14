@@ -26,6 +26,6 @@ const wsProxy = createProxyMiddleware({ target: 'http://localhost:'+port1+'/', w
 
 //app.use( '/', wsProxy );
 app.use( '/', proxy('http://localhost:'+port1+'/')); 
-app.listen( process.env.PORT, function () { console.log("Proxy listening") } )
+//app.listen( process.env.PORT, function () { console.log("Proxy listening") } )
 
 

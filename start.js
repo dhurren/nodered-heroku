@@ -16,7 +16,10 @@ async function restore() {       
   
   const s3Client = new S3Client( { region: region, credentials: { accessKeyId: key_id, secretAccessKey: key }} )
   const {sync} = new S3SyncClient({ client: s3Client });  
-  await sync(  's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']] } )
+  
+  //await sync(  's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']] } )
+  await sync( 's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']],
+          filters: [ { exclude: (key) => key.includes('pm2.json') }] } ) 
   
   exec( 'pm2-runtime start pm2.json' )
 }

@@ -11,6 +11,15 @@ app.listen(process.env.PORT, function () { console.log("Proxy listening") } )
 */
 
 
-var httpProxy = require('http-proxy')
+var http = require('http'),
+    httpProxy = require('http-proxy');
+ 
 
-httpProxy.createProxyServer({target:'https://enjine.cloud/'}).listen(process.env.PORT); // See (†)
+var proxy = httpProxy.createProxyServer({});
+ 
+var server = http.createServer(function(req, res) {
+  proxy.web(req, res, { target: 'https://enjine.cloud' });
+});
+ 
+console.log("listening on port: " + process.env.PORT)
+server.listen( process.env.PORT );

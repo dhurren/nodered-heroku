@@ -22,7 +22,7 @@ console.log( "port=" + port1 )
 //    target: 'ws://localhost/editor/comms', ws: true, changeOrigin: true
 //});
 
-const wsProxy = createProxyMiddleware({ pathFilter: '/', target: 'ws://localhost', ws: true });
+const wsProxy = createProxyMiddleware({ pathFilter: '/editor/comms', target: 'http://localhost', ws: true });
 
 app.use( wsProxy );
 app.use( '/', proxy('http://localhost:'+port1+'/')); 

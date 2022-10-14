@@ -7,7 +7,6 @@
           "args"           : "",
           "exec_mode"      : "fork",
           "instances"      : 1,
-          "increment_var"  : "PORT",
           "watch"          : false,
          },
         {
@@ -16,7 +15,7 @@
           "cwd"            : "/app",
           "args"           : "--settings /app/settings.js --userDir /app",
           "exec_mode"      : "fork",
-          "instances"      : 2,
+          "instances"      : 1,
           "increment_var"  : "PORT",
           "watch"          : false
          }

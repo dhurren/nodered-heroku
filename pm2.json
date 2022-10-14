@@ -8,6 +8,7 @@
           "exec_mode"      : "fork",
           "instances"      : 1,
           "increment_var"  : "PORT",
+          "instance_var"   : "INSTANCE_ID",
           "watch"          : false
          },
         {
@@ -18,6 +19,7 @@
           "exec_mode"      : "fork",
           "instances"      : 3,
           "increment_var"  : "PORT",
+          "instance_var"   : "INSTANCE_ID",
           "watch"          : false
          }
     ]

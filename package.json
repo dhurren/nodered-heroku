@@ -17,6 +17,7 @@
     "dependencies": {
         "pm2": "latest",
         "express": "latest",
+        "express-http-proxy": "latest",
         "http-proxy": "latest",
         "node-red": "latest",
         "node-red-contrib-string": "latest",

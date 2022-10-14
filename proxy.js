@@ -23,7 +23,7 @@ const wsProxy = createProxyMiddleware( {
     ws: true
 });
 
-app.use( '/comms', wsProxy );
+app.use( '/editor/comms', wsProxy );
 app.use( '/', proxy('http://localhost:'+port1+'/')); 
 app.listen(process.env.PORT, function () { console.log("Proxy listening") } )
 

@@ -14,25 +14,16 @@ var http = require('http'),
     httpProxy = require('http-proxy'),
     express = require('express');
 
-var port1 = (parseInt(process.env.PORT) + 1) 
-console.log( "port=" + port1 ) 
-
-var app = express();
-var proxy = httpProxy.createProxyServer({ target: 'https://enjine.cloud/', ws: true });
-var server = require('http').createServer(app);
-
-// proxy HTTP GET / POST
-app.get('/*', function(req, res) {
-  proxy.web(req, res, {});
-});
-app.post('/*', function(req, res) {
-  proxy.web(req, res, {});
+var proxy = new httpProxy.createProxyServer({
+  target: "https://enjine.cloud"
 });
 
-// Proxy websockets
-server.on('upgrade', function (req, socket, head) {
+var proxyServer = http.createServer(function (req, res) {
+  proxy.web(req, res);
+});
+ 
+proxyServer.on('upgrade', function (req, socket, head) {
   proxy.ws(req, socket, head);
 });
-
-
-server.listen( process.env.PORT );
+ 
+proxyServer.listen( process.env.PORT );

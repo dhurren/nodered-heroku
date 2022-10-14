@@ -22,10 +22,10 @@ console.log( "port=" + port1 )
 //    target: 'ws://localhost/editor/comms', ws: true, changeOrigin: true
 //});
 
-//const wsProxy = createProxyMiddleware({ target: 'http://localhost:'+port1+'/', ws: true });
+const wsProxy = createProxyMiddleware({ target: 'http://localhost:'+port1+'/', ws: true });
 
-//app.use( '/', wsProxy );
-app.use( '/', proxy('http://localhost:'+port1+'/')); 
+app.use( '/', wsProxy );
+//app.use( '/', proxy('http://localhost:'+port1+'/')); 
 app.listen( process.env.PORT, function () { console.log("Proxy listening") } )
 
 

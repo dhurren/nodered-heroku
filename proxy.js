@@ -15,7 +15,7 @@ var { createProxyMiddleware } = require('http-proxy-middleware'); 
 var proxy = require('express-http-proxy');   
 var app = require('express')();  
 
-var port1 = (parseInt(process.env.PORT) + 2) 
+var port1 = (parseInt(process.env.PORT) + 1) 
 console.log( "port=" + port1 ) 
 
 //const wsProxy = createProxyMiddleware( {

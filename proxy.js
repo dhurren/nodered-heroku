@@ -24,7 +24,7 @@ console.log( "port=" + port1 )
 
 const wsProxy = createProxyMiddleware({ pathFilter: '/', target: 'http://echo.websocket.org', ws: true });
 
-app.use( '/editor/comms', wsProxy );
+app.use( wsProxy );
 app.use( '/', proxy('http://localhost:'+port1+'/')); 
 app.listen(process.env.PORT, function () { console.log("Proxy listening") } )
 

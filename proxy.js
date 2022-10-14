@@ -4,5 +4,5 @@ var app = require('express')(); 
 var port1 = (parseInt(process.env.PORT) + 1) 
 console.log( "port=" + port1 ) 
 
-app.use('/test', proxy('http://localhost:'+port1+'/')); 
+app.use('/', proxy('http://localhost:'+port1+'/')); 
 app.listen(process.env.PORT, function () { console.log("Proxy listening") } )

@@ -207,7 +207,7 @@ var settings = module.exports = {
      */
     //httpAdminRoot: '/admin',
     // Move the admin UI
-    httpAdminRoot: '/editor'+process.env.INSTANCE_ID,
+    httpAdminRoot: '/editor'+(parseInt(process.env.INSTANCE_ID)+1),
 
     /** The following property can be used to add a custom middleware function
      * in front of all admin http routes. For example, to set custom http

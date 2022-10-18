@@ -26,7 +26,11 @@ const wsProxy = createProxyMiddleware({ target: 'http://localhost:'+redport+'/',
     router: { '/editor1': 'http://localhost:'+redport, 
               '/editor2': 'http://localhost:'+(redport+1), 
               '/editor3': 'http://localhost:'+(redport+2),
-              '/editor4': 'http://localhost:'+(redport+3)
+              '/editor4': 'http://localhost:'+(redport+3),
+              '/instance1': 'http://localhost:'+redport, 
+              '/instance2': 'http://localhost:'+(redport+1), 
+              '/instance3': 'http://localhost:'+(redport+2),
+              '/instance4': 'http://localhost:'+(redport+3)
             } });
 
 app.use( '/', wsProxy );

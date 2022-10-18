@@ -209,7 +209,7 @@
             "a56190b8599aca17"
         ],
         "x": 34,
-        "y": 259,
+        "y": 439,
         "w": 392,
         "h": 162
     },
@@ -436,7 +436,7 @@
         "templateScope": "local",
         "className": "",
         "x": 110,
-        "y": 340,
+        "y": 520,
         "wires": [
             []
         ]
@@ -458,7 +458,7 @@
         "templateScope": "global",
         "className": "",
         "x": 110,
-        "y": 300,
+        "y": 480,
         "wires": [
             []
         ]
@@ -480,7 +480,7 @@
         "templateScope": "local",
         "className": "",
         "x": 350,
-        "y": 380,
+        "y": 560,
         "wires": [
             []
         ]
@@ -502,7 +502,7 @@
         "templateScope": "local",
         "className": "",
         "x": 110,
-        "y": 380,
+        "y": 560,
         "wires": [
             []
         ]
@@ -524,7 +524,7 @@
         "templateScope": "local",
         "className": "",
         "x": 230,
-        "y": 380,
+        "y": 560,
         "wires": [
             []
         ]
@@ -762,7 +762,7 @@
         "oldrc": false,
         "name": "",
         "x": 280,
-        "y": 200,
+        "y": 220,
         "wires": [
             [
                 "f30cb701e656b1b1"
@@ -789,7 +789,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 510,
-        "y": 200,
+        "y": 220,
         "wires": []
     },
     {
@@ -804,7 +804,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 120,
-        "y": 200,
+        "y": 220,
         "wires": [
             [
                 "c6201979db9972ef"
@@ -812,14 +812,128 @@
         ]
     },
     {
-        "id": "01dbd573c583dfb9",
-        "type": "comment",
+        "id": "f7b979df689d791c",
+        "type": "exec",
         "z": "7874accc860ddc72",
-        "name": "Todo",
-        "info": "put start.js into git\ntest heroku rebuilds\nTest public access to s3\nmove keys to environment?\nadd spotify\nadd twitter\nrotate bucket keys",
-        "x": 1210,
-        "y": 40,
+        "command": "pm2 ps",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 280,
+        "y": 280,
+        "wires": [
+            [
+                "d53ca2be4f091065"
+            ],
+            [
+                "d53ca2be4f091065"
+            ],
+            [
+                "d53ca2be4f091065"
+            ]
+        ]
+    },
+    {
+        "id": "d53ca2be4f091065",
+        "type": "debug",
+        "z": "7874accc860ddc72",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 510,
+        "y": 280,
         "wires": []
+    },
+    {
+        "id": "0d3216b79c2988ac",
+        "type": "inject",
+        "z": "7874accc860ddc72",
+        "name": "EXECUTE",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "f7b979df689d791c"
+            ]
+        ]
+    },
+    {
+        "id": "3b8bf7963c8ea948",
+        "type": "exec",
+        "z": "7874accc860ddc72",
+        "command": "pm2 restart all",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 300,
+        "y": 340,
+        "wires": [
+            [
+                "83350a2e58a9718e"
+            ],
+            [
+                "83350a2e58a9718e"
+            ],
+            [
+                "83350a2e58a9718e"
+            ]
+        ]
+    },
+    {
+        "id": "83350a2e58a9718e",
+        "type": "debug",
+        "z": "7874accc860ddc72",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 510,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "eb2ad3d2996b6cdc",
+        "type": "inject",
+        "z": "7874accc860ddc72",
+        "name": "EXECUTE",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "3b8bf7963c8ea948"
+            ]
+        ]
     },
     {
         "id": "53035f704bb7e6be",

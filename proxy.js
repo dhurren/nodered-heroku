@@ -22,16 +22,21 @@ console.log( "node red port=" + redport )
 //    target: 'ws://localhost/editor/comms', ws: true, changeOrigin: true
 //});
 
-const wsProxy = createProxyMiddleware({ target: 'http://localhost:'+redport+'/', ws: true, 
-    router: { '/editor1': 'http://localhost:'+redport, 
-              '/editor2': 'http://localhost:'+(redport+1), 
-              '/editor3': 'http://localhost:'+(redport+2),
-              '/editor4': 'http://localhost:'+(redport+3),
-              '/instance1': 'http://localhost:'+redport, 
-              '/instance2': 'http://localhost:'+(redport+1), 
-              '/instance3': 'http://localhost:'+(redport+2),
-              '/instance4': 'http://localhost:'+(redport+3)
-            } });
+const wsProxy = createProxyMiddleware({ 
+    target: 'http://localhost:'+redport+'/', ws: true, changeOrigin: true, 
+    pathRewrite: { 
+        '^/instance1':'', '^/instance2':'', '^/instance3':'', '^/instance4':''
+    },
+    router: { 
+        '/editor1': 'http://localhost:'+redport, 
+        '/editor2': 'http://localhost:'+(redport+1), 
+        '/editor3': 'http://localhost:'+(redport+2),
+        '/editor4': 'http://localhost:'+(redport+3),
+        '/instance1': 'http://localhost:'+redport, 
+        '/instance2': 'http://localhost:'+(redport+1), 
+        '/instance3': 'http://localhost:'+(redport+2),
+        '/instance4': 'http://localhost:'+(redport+3)
+     } });
 
 app.use( '/', wsProxy );
 //app.use( '/', proxy('http://localhost:'+redport+'/')); 

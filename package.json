@@ -23,6 +23,7 @@
         "http-proxy-middleware": "latest",
         "node-red": "latest",
         "node-red-contrib-xterm": "latest",
+        "node-red-contrib-blockly": "latest",
         "node-red-contrib-string": "latest",
         "node-red-node-base64": "latest",
         "node-red-contrib-simple-queue":"latest",

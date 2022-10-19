@@ -16,6 +16,7 @@
     ],
     "dependencies": {
         "pm2": "latest",
+        "pm2-logrotate": "latest",
         "express": "latest",
         "express-http-proxy": "latest",
         "http-proxy": "latest",

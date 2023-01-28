@@ -10,7 +10,7 @@ var instance = 0
 const wsProxy = createProxyMiddleware({ 
     target: 'http://localhost:'+redport+'/', ws: true, changeOrigin: true, 
     pathRewrite: { 
-        '^/instance1':'', '^/instance2':'', '^/instance3':'', '^/instance4':'', 
+        '^/instance1':'', '^/instance2':'', '^/instance3':'',
         '^/editor$':'/editor1', '^/editor/':'/editor1/'
     }, 
     router: function(req) {

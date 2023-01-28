@@ -1,5 +1,5 @@
 
-const {exec} = require('child_process')
+const {spawn} = require('child_process')
 const {S3Client} = require('@aws-sdk/client-s3')
 const S3SyncClient = require('s3-sync-client')
 
@@ -21,12 +21,5 @@ async function restore() {       
   await sync(  's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']] } )
   
   console.log( "Starting pm2..." )
-  exec( 'pm2-runtime start pm2.json' , (error, stdout, stderr) => {
-    if (error) {
-      console.error(`exec error: ${error}`);
-      return;
-    }
-    //console.log(`stdout: ${stdout}`);
-    //console.error(`stderr: ${stderr}`);
-  });
+  spawn( 'pm2-runtime',  ['start', 'pm2.json'] )
 }

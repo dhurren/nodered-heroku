@@ -21,5 +21,7 @@ async function restore() {       
   await sync(  's3://'+bucket+'/'+name, '/app', { relocations: [[name, '']] } )
   
   console.log( "Starting pm2..." )
-  spawn( 'pm2-runtime',  ['start', 'pm2.json'] )
+  var pm2 = spawn( 'pm2-runtime',  ['start', 'pm2.json'] )
+  pm2.stdout.resume()
+  pm2.stderr.resume()
 }

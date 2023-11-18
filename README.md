@@ -22,14 +22,16 @@ An automation server based on [Node-RED](http://nodered.org), [PM2](https://pm2.
 * Enter the user name password you gave at setup (these can be seen/changed in the Heroku app Environment vars)
 
 ## 4. Test the cloud service.
-* Use the **/instance1/test** path to try out the default 'Hello World' test HTTP end-point.
+* Use the **[appname].herokuapp.com/** path to try out the 'Hello World' home page.
+* Use the **[appname].herokuapp.com/api** path to try out the demo REST api end-point.
 
 ## 5. Create you first cloud end-point
-* Select and copy the 3 nodes which form the existing 'test' service and paste them into the main tab.
-* Double-click on the first node and modify the end-point path from '/test' to '/hello'
-* Modify the end-point response by editing the text set in the second node.
+* Select and copy the 3 nodes which form the existing 'api' service and paste them into the main tab.
+* Double-click on the first node and modify the end-point path from '/api' to '/hello'
+* Modify the end-point response by editing the JSON set in the second node.
 * Switch to the 'Admin' tab and press the 'SAVE' inject node (Saves the changes to the S3 bucket)
 * Test the new end-point in another browser tab by using the **/instance1/hello** path.
+* Note: If you don't press 'SAVE' on the Admin tab your changes will be lost in 24hrs.
 
 ## Adding new Node-Red nodes to the pallet.
 * Test your chosen node in the normal way by adding it to the node-red pallet.
@@ -43,5 +45,8 @@ An automation server based on [Node-RED](http://nodered.org), [PM2](https://pm2.
 * Edit the pm2.json file and increase the number of node-red instances to 2 or 3.
 * In Heroku edit your app's config vars to include NODE_RED_INSTANCES with the same number you used in the pm2.json file.
 * Restart all Dynos.
+* Now if you use **[appname].herokuapp.com/api** url an instance will be chosen to serv your request using a round-robin method (in proxy.js).
+* You can force use of an individual instance like this - **[appname].herokuapp.com/instance2/api**
+
 
   

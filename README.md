@@ -20,7 +20,7 @@ An automation server based on [Node-RED](http://nodered.org), [PM2](https://pm2.
 ## 3. Test the cloud service.
 * Use the **[appname].herokuapp.com/**  url in your browser to try out the 'Hello World' home page.
 * Use the **[appname].herokuapp.com/api**  url in your browser to try out the demo REST api end-point.
-* 
+
 ## 4. Access Node-Red editor on Cloud
 * Flow Editor - Use the **[appname].herokuapp.com/editor** path to access the editor
 * Enter the user name password you gave at setup (these can be seen/changed in the Heroku app Environment vars)

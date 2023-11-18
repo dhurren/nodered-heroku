@@ -16,7 +16,7 @@
           "cwd"            : "/app",
           "args"           : "--settings /app/settings.js --userDir /app",
           "exec_mode"      : "fork",
-          "instances"      : 3,
+          "instances"      : 1,
           "instance_var"   : "INSTANCE_ID",
           "watch"          : false
          }

@@ -16,14 +16,6 @@
         "env": []
     },
     {
-        "id": "80753dc5e0097563",
-        "type": "tab",
-        "label": "File explorer",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "2924702c.b33a7",
         "type": "subflow",
         "name": "ui-table handler",
@@ -193,214 +185,6 @@
         }
     },
     {
-        "id": "7271c749d77c33af",
-        "type": "group",
-        "z": "d2cabe67692a6237",
-        "name": "Home page",
-        "style": {
-            "label": true,
-            "fill": "#bfdbef"
-        },
-        "nodes": [
-            "5df92ceef3174f83",
-            "5c24bfa2a9c26ea6",
-            "46e8422ac3d23a05",
-            "c29be7de337820d8",
-            "3d531aaacd0ad529"
-        ],
-        "x": 34,
-        "y": 259,
-        "w": 392,
-        "h": 162
-    },
-    {
-        "id": "a14f81bfbb849ce6",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "bf61264521fde63b",
-        "type": "ui_link",
-        "name": "GitHub",
-        "link": "https://github.com/",
-        "icon": "open_in_browser",
-        "target": "thistab",
-        "order": 5
-    },
-    {
-        "id": "59e42317.d932fc",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "home",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "160e81fb.f1c86e",
-        "type": "ui_group",
-        "name": "File Browser",
-        "tab": "b63d1f91.68095",
-        "order": 1,
-        "disp": false,
-        "width": "16",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "b63d1f91.68095",
-        "type": "ui_tab",
-        "name": "Files",
-        "icon": "folder_open",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "ddb72df8452ba7d7",
-        "type": "ui_group",
-        "name": "Desktop",
-        "tab": "b63d1f91.68095",
-        "order": 4,
-        "disp": true,
-        "width": 24,
-        "collapse": false
-    },
-    {
-        "id": "af2fe563cfd2cfa6",
-        "type": "ui_group",
-        "name": "Mobile",
-        "tab": "b63d1f91.68095",
-        "order": 5,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "26e8fe8026c92abb",
-        "type": "ui_group",
-        "name": "Properties",
-        "tab": "b63d1f91.68095",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "4128a70510a0cd4e",
-        "type": "ui_group",
-        "name": "Preview",
-        "tab": "b63d1f91.68095",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "926d6874.375768",
-        "type": "ui_group",
-        "name": "Splash screen",
-        "tab": "59e42317.d932fc",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "15e25d2e6c573649",
         "type": "xterm_config",
         "rows": 60,
@@ -442,15 +226,15 @@
         "type": "http in",
         "z": "4ecb7e9c0fc75053",
         "name": "",
-        "url": "/test",
+        "url": "/",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 120,
-        "y": 120,
+        "x": 110,
+        "y": 100,
         "wires": [
             [
-                "5bbd1d4e4cbfeac9"
+                "3b26ab39f306bfd4"
             ]
         ]
     },
@@ -461,23 +245,70 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 490,
-        "y": 120,
+        "x": 470,
+        "y": 100,
         "wires": []
     },
     {
-        "id": "5bbd1d4e4cbfeac9",
+        "id": "5e7289fbbde09673",
+        "type": "http in",
+        "z": "4ecb7e9c0fc75053",
+        "name": "",
+        "url": "/api",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "f1c36842d48e9f5c"
+            ]
+        ]
+    },
+    {
+        "id": "5f6c7b8ad72eea4e",
+        "type": "http response",
+        "z": "4ecb7e9c0fc75053",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f1c36842d48e9f5c",
         "type": "function",
         "z": "4ecb7e9c0fc75053",
-        "name": "function 1",
-        "func": "msg.payload = env.get(\"pm_id\")\nconsole.log( msg.payload )\nreturn msg;",
+        "name": "JSON Reply",
+        "func": "msg.payload = { \"msg\": \"hello world\", \"error\":\"\" }\nnode.warn( \"Got API call\" );\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
-        "y": 120,
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "5f6c7b8ad72eea4e"
+            ]
+        ]
+    },
+    {
+        "id": "3b26ab39f306bfd4",
+        "type": "template",
+        "z": "4ecb7e9c0fc75053",
+        "name": "index.html",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n\n<head>\n    <meta name=\"viewport\" content=\"minimum-scale=1, initial-scale=1, width=device-width\" />\n    <meta charset=\"UTF-8\">\n    <title></title>\n\n    <script>\n        _hybrid=false\n    </script>\n\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/react.development.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/react-dom.development.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-ui.development.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-ui-lab.production.min.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/swipeable-views.js\"></script>\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-icons.css\">\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/fonts.css\">\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/styles.css\">\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/animate.min.css\">\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/moment.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/rome.standalone.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-datetime-picker.js\" charset=\"utf-8\">\n    </script>\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-datetime-picker.css\">\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/date-time-picker/js/draggabilly.pkgd.min.js\">\n    </script>\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/date-time-picker/js/datetimepicker.js\"></script>\n\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/ui.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/obj.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/enjine-ui.js\"></script>\n\n    <script src=\"main.js\"></script>\n</head>\n\n\n<body onload=\"if( typeof onStart=='function' ) onStart(); else main = new Main()\">\n\n    <link id=\"_id_theme\" rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/light.css\">\n    <link rel=\"stylesheet\" id=\"_id_picker_theme\"\n        href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/date-time-picker/css/light.css\">\n\n    <div id=\"root\"> </div>\n    <div id=\"popups\"> </div>\n    <div id=\"drawer\"> </div>\n\n</body>\n\n</html>\n",
+        "output": "str",
+        "x": 290,
+        "y": 100,
         "wires": [
             [
                 "2605096e0b6a61d0"
@@ -485,114 +316,79 @@
         ]
     },
     {
-        "id": "5df92ceef3174f83",
-        "type": "ui_template",
-        "z": "d2cabe67692a6237",
-        "g": "7271c749d77c33af",
-        "group": "926d6874.375768",
-        "name": "Body",
-        "order": 4,
-        "width": 6,
-        "height": 6,
-        "format": "<img src=\"https://ichi.pro/assets/images/max/724/0*QPRSzJDjg5OtsqRj\">\n<p></p>\n<a class=\"my-title\">Node-RED in Cloud</a>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 110,
-        "y": 340,
+        "id": "6433cb2b943ca4e3",
+        "type": "template",
+        "z": "4ecb7e9c0fc75053",
+        "name": "main.js",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "plain",
+        "template": "class Main extends App {\n    onStart() {\n        // Set theme colors.\n        ui.setThemeColor(ui.theme.primary, \"#999999\")\n\n        // Create a full screen layout.\n        this.main = ui.addLayout(\"main\", \"Linear\", \"Top,FillXY\")\n\n        this.apb = ui.addAppBar(this.main, \"My App\", \"Menu,Primary\")\n        this.apb.setOnMenu(this.showDrawer)\n\n        // Add an icon buttons to the appbar\n        this.btn1 = ui.addButton(this.apb.layout, \"person\", \"icon\")\n        this.btn2 = ui.addButton(this.apb.layout, \"delete\", \"icon\")\n        this.btn3 = ui.addButton(this.apb.layout, \"more_vert\", \"icon\")\n\n        // Adds a drawer layout\n        this.drawLay = ui.addLayout(null, \"Linear\", \"Top\")\n\n        // Adds a drawer to the app and pass the drawer layout\n        this.drawer = ui.addDrawer(this.drawLay, \"left\")\n\n        // Adds a list to the drawer layout\n        let lst = [\n            [\"folder\", \"Folders\"],\n            [\"music_note\", \"Audios\"],\n            [\"photo\", \"Photos\"]\n        ]\n        this.lstMenu = ui.addList(this.drawLay, lst, \"Icon\", 1)\n        this.lstMenu.label = \"Main navigation\"\n\n        // Adds text and icon to main layout.\n        this.text = ui.addText(this.main, \"Hello World!\", \"Center,H4,Secondary\", 1)\n        this.text.margins = 0.02\n\n        // Adds an icon with a margin.\n        this.icon = ui.addText(this.main, \"sentiment_satisfied\", \"Icon\")\n        this.icon.textSize = \"2.9em\"\n        this.icon.textColor = \"#ff88ff\"\n\n        // Adds and FAB button.\n        this.fab = ui.addFAB(this.main, \"add\", \"Primary,Extended,Left\", \"New message\")\n    }\n\n    showDrawer() {\n        this.drawer.show()\n    }\n}\n",
+        "output": "str",
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "ad44337adf50b598"
+            ]
+        ]
+    },
+    {
+        "id": "488d4532644ee0dd",
+        "type": "inject",
+        "z": "4ecb7e9c0fc75053",
+        "name": "Edit",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "6433cb2b943ca4e3"
+            ]
+        ]
+    },
+    {
+        "id": "ad44337adf50b598",
+        "type": "file",
+        "z": "4ecb7e9c0fc75053",
+        "name": "public/main.js",
+        "filename": "public/main.js",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 460,
+        "y": 140,
         "wires": [
             []
         ]
     },
     {
-        "id": "5c24bfa2a9c26ea6",
-        "type": "ui_template",
-        "z": "d2cabe67692a6237",
-        "g": "7271c749d77c33af",
-        "group": "926d6874.375768",
-        "name": "Head",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "format": "<style>\n    .md-toolbar-tools{\n        background-image: url(\"https://tf.covid19-rv.eng.it/asset/imgs/eng_white.png\");\n        background-repeat: no-repeat;\n        background-position: 98%;\n        background-size: contain;\n    }\n</style>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "global",
-        "className": "",
-        "x": 110,
-        "y": 300,
-        "wires": [
-            []
-        ]
+        "id": "6e1402914af2a228",
+        "type": "comment",
+        "z": "4ecb7e9c0fc75053",
+        "name": "Home page",
+        "info": "",
+        "x": 130,
+        "y": 60,
+        "wires": []
     },
     {
-        "id": "46e8422ac3d23a05",
-        "type": "ui_template",
-        "z": "d2cabe67692a6237",
-        "g": "7271c749d77c33af",
-        "group": "926d6874.375768",
-        "name": "CSS",
-        "order": 2,
-        "width": 6,
-        "height": 1,
-        "format": "<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>\n<style>\n.my-title { \n    color: #8E0000; \n    font-family: \"Roboto Slab\";\n    font-size: 30px; \n    font-weight: bold; \n    letter-spacing: -1px; \n    line-height: 1; \n    text-align: center; \n}\n\nfooter { \n    color: #111; \n    background-color:white;\n    font-family: 'Helvetica Neue', sans-serif; \n    font-size: 9px; \n    text-align: left; \n}\n\nlinks { \n    text-align: right;\n}\n\n</style>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 350,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c29be7de337820d8",
-        "type": "ui_template",
-        "z": "d2cabe67692a6237",
-        "g": "7271c749d77c33af",
-        "group": "926d6874.375768",
-        "name": "Footer",
-        "order": 6,
-        "width": 4,
-        "height": 1,
-        "format": "<footer>\n    by Alerox, 2021\n    &nbsp;\n    <img height=\"18\" alt=\"eng\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Engineering_logo.png/320px-Engineering_logo.png\"/>\n</footer>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 110,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3d531aaacd0ad529",
-        "type": "ui_template",
-        "z": "d2cabe67692a6237",
-        "g": "7271c749d77c33af",
-        "group": "926d6874.375768",
-        "name": "Links",
-        "order": 7,
-        "width": 2,
-        "height": 1,
-        "format": "<links>\n    <a href=\"https://tinyurl.com/wakeup-heroku\" style=\"text-decoration: none;\">\n        <img height=\"18\" alt=\"appscripts\" src=\"https://www.gstatic.com/script/apps_script_1x_24dp.png\"/>\n    </a>\n    <a href=\"https://github.com/hybuild-project/nodered-heroku\" style=\"text-decoration: none;\">\n        <img height=\"18\" alt=\"github\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/240px-Octicons-mark-github.svg.png\"/>\n    </a>\n    <a href=\"https://dashboard.heroku.com/apps/nodered-on-cloud\" style=\"text-decoration: none;\">\n        <img height=\"18\" alt=\"heroku\" src=\"https://status.heroku.com/images/apple-touch-icon-120x120-df4786699abad2c062b3126d2caa0655.png\"/>\n    </a>\n    <a href=\"../editor\" style=\"text-decoration: none;\">\n        <img height=\"18\" alt=\"nodered\" src=\"https://nodered.org/about/resources/media/node-red-icon.png\">\n    </a>\n</links>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 230,
-        "y": 380,
-        "wires": [
-            []
-        ]
+        "id": "d5ea8091563f1054",
+        "type": "comment",
+        "z": "4ecb7e9c0fc75053",
+        "name": "API End-Points",
+        "info": "",
+        "x": 140,
+        "y": 220,
+        "wires": []
     },
     {
         "id": "787996479113e030",
@@ -605,7 +401,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 590,
+        "x": 490,
         "y": 80,
         "wires": [
             [
@@ -617,18 +413,18 @@
         "id": "521f154144fd0a98",
         "type": "inject",
         "z": "d2cabe67692a6237",
-        "name": "SAVE",
+        "name": "SAVE to S3",
         "props": [],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 110,
+        "x": 130,
         "y": 80,
         "wires": [
             [
-                "f94ee2871a586d2d"
+                "2d0d8127a2d0e9e7"
             ]
         ]
     },
@@ -644,7 +440,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 770,
+        "x": 670,
         "y": 80,
         "wires": [
             [
@@ -671,67 +467,9 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 990,
+        "x": 890,
         "y": 80,
         "wires": []
-    },
-    {
-        "id": "f94ee2871a586d2d",
-        "type": "wysiwyg",
-        "z": "d2cabe67692a6237",
-        "name": "",
-        "text": "<p>const {S3Client} = require('@aws-sdk/client-s3'); </p><p>const S3SyncClient = require('s3-sync-client');</p><p><br></p><p>const key_id =&nbsp;process.env.BUCKETEER_AWS_ACCESS_KEY_ID </p><p>const key =&nbsp;process.env.BUCKETEER_AWS_SECRET_ACCESS_KEY </p><p>const region =&nbsp;process.env.BUCKETEER_AWS_REGION</p><p>const bucket = process.env.BUCKETEER_BUCKET_NAME&nbsp; &nbsp; &nbsp;</p><p>const name = process.env.NODE_RED_USERNAME</p> <p><br></p><p> save(); </p><p><br></p><p> async function save() { </p><p>&nbsp; &nbsp;const s3Client = new S3Client( { region: region, credentials: { accessKeyId: key_id, secretAccessKey: key }} ) </p><p>&nbsp; &nbsp;const {sync} = new S3SyncClient({ client: s3Client })</p><p>&nbsp; &nbsp;await sync( '/app', 's3://'+bucket+'/'+name,&nbsp;{\n    filters: [\n{ exclude: (key) =&gt; key.includes('/') }, { include: (key) =&gt; key.startsWith('public/') } ] }&nbsp;); </p><p>}</p>",
-        "field": "payload",
-        "fieldType": "msg",
-        "x": 260,
-        "y": 80,
-        "wires": [
-            [
-                "c2fce56457632818"
-            ]
-        ]
-    },
-    {
-        "id": "c2fce56457632818",
-        "type": "html-to-text",
-        "z": "d2cabe67692a6237",
-        "name": "",
-        "x": 430,
-        "y": 80,
-        "wires": [
-            [
-                "787996479113e030"
-            ]
-        ]
-    },
-    {
-        "id": "fb4beaa33b940731",
-        "type": "wysiwyg",
-        "z": "d2cabe67692a6237",
-        "name": "",
-        "text": "<p>const {S3Client} = require('@aws-sdk/client-s3')</p><p>const S3SyncClient = require('s3-sync-client')</p><p><br></p><p>\n</p><p>const key_id =&nbsp;process.env.BUCKETEER_AWS_ACCESS_KEY_ID </p><p>const key =&nbsp;process.env.BUCKETEER_AWS_SECRET_ACCESS_KEY </p><p>const region =&nbsp;process.env.BUCKETEER_AWS_REGION</p><p>const bucket = process.env.BUCKETEER_BUCKET_NAME&nbsp; &nbsp; &nbsp;</p><p>const name = process.env.NODE_RED_USERNAME</p><p>\n<br></p><p>restore()\n</p><p><br></p><p>async function restore() {  &nbsp; &nbsp; &nbsp; </p><p>&nbsp; &nbsp;const s3Client = new S3Client( { region: region, credentials: { accessKeyId: key_id, secretAccessKey: key }} ) </p><p>&nbsp; &nbsp;const {sync} = new S3SyncClient({ client: s3Client }); </p><p>&nbsp; &nbsp;await sync(  's3://'+bucket+'/'+name,&nbsp;'/app',&nbsp;{ relocations: [[name, '']] } ) </p><p>}</p><p><br></p>",
-        "field": "payload",
-        "fieldType": "msg",
-        "x": 260,
-        "y": 140,
-        "wires": [
-            [
-                "37ed4d2aa19e6db7"
-            ]
-        ]
-    },
-    {
-        "id": "37ed4d2aa19e6db7",
-        "type": "html-to-text",
-        "z": "d2cabe67692a6237",
-        "name": "",
-        "x": 430,
-        "y": 140,
-        "wires": [
-            [
-                "9cb86c0108b9df91"
-            ]
-        ]
     },
     {
         "id": "9cb86c0108b9df91",
@@ -744,7 +482,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 600,
+        "x": 500,
         "y": 140,
         "wires": [
             [
@@ -764,7 +502,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 780,
+        "x": 680,
         "y": 140,
         "wires": [
             [
@@ -791,7 +529,7 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 990,
+        "x": 890,
         "y": 140,
         "wires": []
     },
@@ -799,30 +537,131 @@
         "id": "03b2517c83753949",
         "type": "inject",
         "z": "d2cabe67692a6237",
-        "name": "RESTORE",
+        "name": "RESTORE from S3",
         "props": [],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 120,
+        "x": 150,
         "y": 140,
         "wires": [
             [
-                "fb4beaa33b940731"
+                "f9d7604f450fe4a0"
             ]
         ]
     },
     {
-        "id": "6bc875b382b293fc",
-        "type": "comment",
+        "id": "e1a9962c4b5ac224",
+        "type": "template",
         "z": "d2cabe67692a6237",
-        "name": "Todo",
-        "info": "write looping pm2 restarter script (restart all does not work)\nput back into git when stable\nallow pallet installs (use s3)\nremove File explorer tab (it's dangerous)",
-        "x": 90,
-        "y": 480,
+        "name": "proxy.js",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "plain",
+        "template": "\nvar { createProxyMiddleware } = require('http-proxy-middleware');  \nvar proxy = require('express-http-proxy');   \nvar app = require('express')();  \n\nvar redport = (parseInt(process.env.PORT) + 1) \nconsole.log( \"node red port=\" + redport ) \n\nvar instances = parseInt( process.env.NODE_RED_INSTANCES ? process.env.NODE_RED_INSTANCES : 1 )\nconsole.log( \"instances = \" + instances ) \nvar instance = 0\n\nconst wsProxy = createProxyMiddleware({ \n    target: 'http://localhost:'+redport+'/', ws: true, changeOrigin: true, \n    pathRewrite: { \n        '^/instance1':'', '^/instance2':'', '^/instance3':'',\n        '^/editor$':'/editor1', '^/editor/':'/editor1/'\n    }, \n    router: function(req) {\n        \n        var i = 0\n        if( req.url.startsWith(\"/favicon.ico\") ) i = 0\n        else if( req.url.startsWith(\"/editor1\") ) i = 0\n        else if( req.url.startsWith(\"/editor2\") ) i = 1\n        else if( req.url.startsWith(\"/editor3\") ) i = 2\n        else if( req.url.startsWith(\"/editor\") ) i = 0\n        else if( req.url.startsWith(\"/ui\") ) i = 0\n        else if( req.url.startsWith(\"/instance1\") ) i = 0\n        else if( req.url.startsWith(\"/instance2\") ) i = 1\n        else if( req.url.startsWith(\"/instance3\") ) i = 2\n        else { \n            //Round robin.\n            if( instance++==(instances-1) ) instance = 0; \n            i = instance \n        }\n\n        return 'http://localhost:'+(redport+i)\n    }\n  });\n\napp.use( '/', wsProxy );\napp.listen( process.env.PORT, function () { console.log(\"Proxy listening\") } )\n",
+        "output": "str",
+        "x": 260,
+        "y": 300,
+        "wires": [
+            [
+                "c8e6c01f7c4b2367"
+            ]
+        ]
+    },
+    {
+        "id": "a1921062bd47f9d6",
+        "type": "inject",
+        "z": "d2cabe67692a6237",
+        "name": "EDIT",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "e1a9962c4b5ac224"
+            ]
+        ]
+    },
+    {
+        "id": "c8e6c01f7c4b2367",
+        "type": "file",
+        "z": "d2cabe67692a6237",
+        "name": "proxy.js",
+        "filename": "proxy.js",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "2b7ba547bb4e4e9c"
+            ]
+        ]
+    },
+    {
+        "id": "2b7ba547bb4e4e9c",
+        "type": "debug",
+        "z": "d2cabe67692a6237",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 300,
         "wires": []
+    },
+    {
+        "id": "2d0d8127a2d0e9e7",
+        "type": "template",
+        "z": "d2cabe67692a6237",
+        "name": "save.js",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "plain",
+        "template": "const { S3Client } = require('@aws-sdk/client-s3');\nconst S3SyncClient = require('s3-sync-client');\n\n\nconst key_id = process.env.BUCKETEER_AWS_ACCESS_KEY_ID\nconst key = process.env.BUCKETEER_AWS_SECRET_ACCESS_KEY\nconst region = process.env.BUCKETEER_AWS_REGION\nconst bucket = process.env.BUCKETEER_BUCKET_NAME\nconst name = process.env.NODE_RED_USERNAME\n\nsave();\n\nasync function save() {\n\n    const s3Client = new S3Client({\n        region: region, credentials: {\n            accessKeyId:\n                key_id, secretAccessKey: key\n        }\n    })\n\n    const { sync } = new S3SyncClient({ client: s3Client })\n    await sync('/app', 's3://' + bucket + '/' + name, {\n        filters: [{\n            exclude: (key) =>\n                key.includes('/')\n        }, { include: (key) => key.startsWith('public/') }]\n    });\n}\n",
+        "output": "str",
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "787996479113e030"
+            ]
+        ]
+    },
+    {
+        "id": "f9d7604f450fe4a0",
+        "type": "template",
+        "z": "d2cabe67692a6237",
+        "name": "restore.js",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "plain",
+        "template": "\nconst { S3Client } = require('@aws-sdk/client-s3')\nconst S3SyncClient = require('s3-sync-client')\n\n\nconst key_id = process.env.BUCKETEER_AWS_ACCESS_KEY_ID\nconst key = process.env.BUCKETEER_AWS_SECRET_ACCESS_KEY\nconst region = process.env.BUCKETEER_AWS_REGION\nconst bucket = process.env.BUCKETEER_BUCKET_NAME\nconst name = process.env.NODE_RED_USERNAME\n\nrestore()\n\nasync function restore() {\n    \n    const s3Client = new S3Client({\n        region: region, credentials: {\n            accessKeyId:\n                key_id, secretAccessKey: key\n        }\n    })\n\n    const { sync } = new S3SyncClient({ client: s3Client });\n    await sync('s3://' + bucket + '/' + name, '/app', {\n        relocations: [[name, '']],\n        filters: [{ exclude: (key) => key.includes('pm2.json') }]\n    })\n}",
+        "output": "str",
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "9cb86c0108b9df91"
+            ]
+        ]
     },
     {
         "id": "c5d8638dc3438af9",
@@ -834,7 +673,7 @@
         "rows": 1,
         "name": "pm2 ps",
         "x": 110,
-        "y": 200,
+        "y": 220,
         "wires": []
     },
     {
@@ -847,7 +686,7 @@
         "rows": 1,
         "name": "pm2 restart proxy",
         "x": 310,
-        "y": 200,
+        "y": 220,
         "wires": []
     },
     {
@@ -860,1220 +699,7 @@
         "rows": 1,
         "name": "pm2 restart node-red",
         "x": 560,
-        "y": 200,
+        "y": 220,
         "wires": []
-    },
-    {
-        "id": "2089af19c23ff46b",
-        "type": "inject",
-        "z": "80753dc5e0097563",
-        "name": "Init",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "change",
-        "payload": "/app",
-        "payloadType": "str",
-        "x": 110,
-        "y": 340,
-        "wires": [
-            [
-                "082202ae180dd944",
-                "49d526122d121d6e"
-            ]
-        ]
-    },
-    {
-        "id": "413008d4e7b3e368",
-        "type": "ui_button",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "group": "160e81fb.f1c86e",
-        "order": 5,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "Refresh",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "refresh",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "refresh",
-        "topicType": "str",
-        "x": 100,
-        "y": 160,
-        "wires": [
-            [
-                "082202ae180dd944"
-            ]
-        ]
-    },
-    {
-        "id": "1f2fbead0d837e17",
-        "type": "ui_button",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "group": "160e81fb.f1c86e",
-        "order": 4,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "Delete",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "delete",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 90,
-        "y": 400,
-        "wires": [
-            [
-                "1892714bbdf953a7"
-            ]
-        ]
-    },
-    {
-        "id": "1892714bbdf953a7",
-        "type": "function",
-        "z": "80753dc5e0097563",
-        "name": "Get file",
-        "func": "// Get the filename from the flow context\nlet filename = flow.get(\"fileselected\");\n\n// check, if the filename is undefined that means it does not exist yet, nothing is selected yet\n// return: do not output anything\nif (filename === undefined) {\n    return;\n}\n\n// return the filename to the file-in node to delete\nmsg.filename = filename;\n\nif (msg.filename.replace(/^.*(\\\\|\\/|\\:)/, '')[0] !== \".\") {\n    // Only do this if this is a file, we don't delete folders\n    return msg;\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 300,
-        "y": 400,
-        "wires": [
-            [
-                "d4cbebb0ec37535e"
-            ]
-        ]
-    },
-    {
-        "id": "a7f4c4417a409c5f",
-        "type": "file",
-        "z": "80753dc5e0097563",
-        "name": "Delete file",
-        "filename": "",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "delete",
-        "encoding": "none",
-        "x": 960,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "46127bd7b5373a03",
-        "type": "http in",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "url": "/download",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 520,
-        "wires": [
-            [
-                "a17ce22e9f4cdc3f"
-            ]
-        ]
-    },
-    {
-        "id": "328a89020eb45850",
-        "type": "http response",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 810,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "a17ce22e9f4cdc3f",
-        "type": "function",
-        "z": "80753dc5e0097563",
-        "name": "Extract file",
-        "func": "msg.filename = msg.req.query.filename;\nmsg.contentdisposition = \"attachment; filename=\\\"\" + msg.req.query.filename.replace(/^.*(\\\\|\\/|\\:)/, '') + \"\\\"\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 520,
-        "wires": [
-            [
-                "2ec9f38d91b28fb6"
-            ]
-        ],
-        "outputLabels": [
-            "Folder selected"
-        ]
-    },
-    {
-        "id": "2ec9f38d91b28fb6",
-        "type": "file in",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "filename": "",
-        "format": "",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 460,
-        "y": 520,
-        "wires": [
-            [
-                "3278e96d2ab3eb39"
-            ]
-        ]
-    },
-    {
-        "id": "3278e96d2ab3eb39",
-        "type": "change",
-        "z": "80753dc5e0097563",
-        "name": "set headers",
-        "rules": [
-            {
-                "t": "set",
-                "p": "headers",
-                "pt": "msg",
-                "to": "{}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "headers.content-type",
-                "pt": "msg",
-                "to": "text/csv",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "headers.Content-Disposition",
-                "pt": "msg",
-                "to": "contentdisposition",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 650,
-        "y": 520,
-        "wires": [
-            [
-                "328a89020eb45850"
-            ]
-        ]
-    },
-    {
-        "id": "b330d82586e873fa",
-        "type": "ui_button",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "group": "160e81fb.f1c86e",
-        "order": 6,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "Graph",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "show_chart",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 90,
-        "y": 460,
-        "wires": [
-            [
-                "83938bd8e2d86a75"
-            ]
-        ]
-    },
-    {
-        "id": "83938bd8e2d86a75",
-        "type": "function",
-        "z": "80753dc5e0097563",
-        "name": "Get file",
-        "func": "// Get the filename from the flow context\nlet filename = flow.get(\"fileselected\");\n\n// check, if the filename is undefined that means it does not exist yet, nothing is selected yet\n// return: do not output anything\nif (filename === undefined) {\n    return;\n}\n\n// return the filename to the file-in node to delete\nmsg.filename = filename;\n\nif (msg.filename.replace(/^.*(\\\\|\\/|\\:)/, '')[0] !== \".\") {\n    // Only do this if this is a file, we don't delete folders\n    return msg;\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 300,
-        "y": 460,
-        "wires": [
-            [
-                "88b84313f98dc5ae"
-            ]
-        ]
-    },
-    {
-        "id": "88b84313f98dc5ae",
-        "type": "file in",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "filename": "",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 460,
-        "y": 460,
-        "wires": [
-            [
-                "4ce4b1379f441084"
-            ]
-        ]
-    },
-    {
-        "id": "4ce4b1379f441084",
-        "type": "csv",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "sep": ",",
-        "hdrin": true,
-        "hdrout": "",
-        "multi": "mult",
-        "ret": "\\n",
-        "temp": "",
-        "skip": "0",
-        "strings": true,
-        "include_empty_strings": false,
-        "include_null_values": false,
-        "x": 630,
-        "y": 460,
-        "wires": [
-            [
-                "3d375546cc65ac33"
-            ]
-        ]
-    },
-    {
-        "id": "3d375546cc65ac33",
-        "type": "function",
-        "z": "80753dc5e0097563",
-        "name": "Plot",
-        "func": "var chart = [{\n    \"series\":[],\n    \"data\":[],\n    \"labels\":[msg.filename]\n}];\n\n\n/*\nvar pressure = [];\nvar out2 = [];\n\nfor (var i=0; i<msg.payload.length; i++) {\n    pressure.push({\"x\":msg.payload[i].timestamp, \"y\":msg.payload[i].pressure});\n    out2.push({\"x\":msg.payload[i].timestamp, \"y\":msg.payload[i].out2*200});\n\n}\nchart[0].data.push(pressure);\nchart[0].data.push(out2);\n*/\n\nlet columns = 0;\n\nfor(var series in msg.payload[0]) {\n    if(series!==\"time\") {\n        chart[0].series.push(series);\n        chart[0].data.push([]);\n        columns++;\n    }\n}\n\n\nfor (var j=0; j<msg.payload.length; j++) {\n   for(var i=0;i<columns;i++) {\n       chart[0].data[i].push({\"x\":msg.payload[j].time, \"y\":msg.payload[j][chart[0].series[i]]});\n   } \n}\n\n\n\n\nmsg.payload = chart;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 810,
-        "y": 460,
-        "wires": [
-            [
-                "df9537362cf74d85",
-                "f774fca1a9d11b11"
-            ]
-        ]
-    },
-    {
-        "id": "df9537362cf74d85",
-        "type": "ui_chart",
-        "z": "80753dc5e0097563",
-        "name": "for PC",
-        "group": "ddb72df8452ba7d7",
-        "order": 1,
-        "width": 24,
-        "height": 6,
-        "label": "",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 970,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a968ef023fd21347",
-        "type": "ui_toast",
-        "z": "80753dc5e0097563",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "Yes",
-        "cancel": "No",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 650,
-        "y": 400,
-        "wires": [
-            [
-                "35f269edf8fcbdc5"
-            ]
-        ]
-    },
-    {
-        "id": "d4cbebb0ec37535e",
-        "type": "change",
-        "z": "80753dc5e0097563",
-        "name": "set message",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Confirmation",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "\"Delete \" & filename & \"?\"",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 450,
-        "y": 400,
-        "wires": [
-            [
-                "a968ef023fd21347"
-            ]
-        ]
-    },
-    {
-        "id": "35f269edf8fcbdc5",
-        "type": "switch",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Yes",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 810,
-        "y": 400,
-        "wires": [
-            [
-                "a7f4c4417a409c5f"
-            ]
-        ]
-    },
-    {
-        "id": "082202ae180dd944",
-        "type": "function",
-        "z": "80753dc5e0097563",
-        "name": "Set folder",
-        "func": "let folder = context.get(\"folder\") || \"/\";\ncontext.set(\"folder\", folder);\n\nlet hidden = context.get(\"hidden\") || false;\ncontext.set(\"hidden\", hidden);\n\nif (msg.topic===\"up\") {\n    var path = folder.split('/');\n    path.pop();\n    folder = path.join('/'); \n    if (folder===\"\") folder=\"/\";\n    context.set(\"folder\", folder);\n}\n\nif (msg.topic===\"change\") {\n    folder=msg.payload;    \n    context.set(\"folder\", folder);\n}\n\nif (msg.topic===\"hidden\") {\n    hidden=msg.payload;    \n    context.set(\"hidden\", hidden);\n}\n\nmsg.payload = {\"start\":folder, \"hidden\": hidden};\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 300,
-        "y": 240,
-        "wires": [
-            [
-                "640f1a719dced221",
-                "f9a38b16b458f418"
-            ]
-        ]
-    },
-    {
-        "id": "640f1a719dced221",
-        "type": "ui_text",
-        "z": "80753dc5e0097563",
-        "group": "160e81fb.f1c86e",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Folder:",
-        "format": "{{msg.payload.start}}",
-        "layout": "row-left",
-        "className": "",
-        "x": 470,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "78043adc8bdf257e",
-        "type": "ui_button",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "group": "160e81fb.f1c86e",
-        "order": 2,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "Parent",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "arrow_upwards",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "up",
-        "topicType": "str",
-        "x": 90,
-        "y": 240,
-        "wires": [
-            [
-                "082202ae180dd944"
-            ]
-        ]
-    },
-    {
-        "id": "ab3e143a544456cf",
-        "type": "ui_button",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "group": "160e81fb.f1c86e",
-        "order": 3,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "Home",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "home",
-        "payload": "/app",
-        "payloadType": "str",
-        "topic": "change",
-        "topicType": "str",
-        "x": 90,
-        "y": 200,
-        "wires": [
-            [
-                "082202ae180dd944"
-            ]
-        ]
-    },
-    {
-        "id": "6d41802c333357d0",
-        "type": "ui_switch",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "label": "Hidden",
-        "tooltip": "Show hidden files or not",
-        "group": "160e81fb.f1c86e",
-        "order": 9,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "decouple": "false",
-        "topic": "hidden",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "check_box",
-        "oncolor": "#000000",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "check_box_outline_blank",
-        "offcolor": "#000000",
-        "animate": true,
-        "className": "",
-        "x": 100,
-        "y": 280,
-        "wires": [
-            [
-                "082202ae180dd944"
-            ]
-        ]
-    },
-    {
-        "id": "f774fca1a9d11b11",
-        "type": "ui_chart",
-        "z": "80753dc5e0097563",
-        "name": "for cell",
-        "group": "af2fe563cfd2cfa6",
-        "order": 1,
-        "width": 6,
-        "height": 4,
-        "label": "",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 970,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "49d526122d121d6e",
-        "type": "ui_button",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "group": "160e81fb.f1c86e",
-        "order": 7,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "Desktop",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "computer",
-        "payload": "{\"group\":{\"show\":[\"Files_Desktop\"],\"hide\":[\"Files_Mobile\"]}}",
-        "payloadType": "json",
-        "topic": "",
-        "topicType": "str",
-        "x": 300,
-        "y": 340,
-        "wires": [
-            [
-                "e710040fb53a0681"
-            ]
-        ]
-    },
-    {
-        "id": "e710040fb53a0681",
-        "type": "ui_ui_control",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "events": "all",
-        "x": 460,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d987e1903aef9da9",
-        "type": "ui_button",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "group": "160e81fb.f1c86e",
-        "order": 8,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "label": "Mobile",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "smartphone",
-        "payload": "{\"group\":{\"show\":[\"Files_Mobile\"],\"hide\":[\"Files_Desktop\"]}}",
-        "payloadType": "json",
-        "topic": "",
-        "topicType": "str",
-        "x": 630,
-        "y": 340,
-        "wires": [
-            [
-                "fc04e4bd34460fea"
-            ]
-        ]
-    },
-    {
-        "id": "fc04e4bd34460fea",
-        "type": "ui_ui_control",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "events": "all",
-        "x": 820,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "666b6b8298de4314",
-        "type": "change",
-        "z": "80753dc5e0097563",
-        "name": "change dir",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.name",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "change",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 830,
-        "y": 240,
-        "wires": [
-            [
-                "082202ae180dd944"
-            ]
-        ]
-    },
-    {
-        "id": "c9a5f25a7c05b8fd",
-        "type": "change",
-        "z": "80753dc5e0097563",
-        "name": "save file",
-        "rules": [
-            {
-                "t": "set",
-                "p": "fileselected",
-                "pt": "flow",
-                "to": "payload.name",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "filename",
-                "pt": "msg",
-                "to": "payload.name",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 820,
-        "y": 100,
-        "wires": [
-            [
-                "88bd42ca560d1684"
-            ]
-        ]
-    },
-    {
-        "id": "f9a38b16b458f418",
-        "type": "fs-file-lister",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "start": "data",
-        "pattern": "*.*",
-        "folders": "*",
-        "hidden": false,
-        "lstype": "both",
-        "path": true,
-        "single": true,
-        "depth": 0,
-        "stat": true,
-        "showWarnings": false,
-        "x": 300,
-        "y": 160,
-        "wires": [
-            [
-                "cb77dc9f7cedf8a8"
-            ]
-        ]
-    },
-    {
-        "id": "cb77dc9f7cedf8a8",
-        "type": "function",
-        "z": "80753dc5e0097563",
-        "name": "Format table",
-        "func": "for (var i = 0; i < msg.payload.length; i++) {\n//  msg.payload[i].stat.size = msg.payload[i].stat.size / 1024;\n    msg.payload[i].stat.created = msg.payload[i].stat.created.toISOString().slice(0, 19).replace('T', ' ');\n    msg.payload[i].stat.changed = msg.payload[i].stat.changed.toISOString().slice(0, 19).replace('T', ' ');\n    msg.payload[i].stat.accessed = msg.payload[i].stat.accessed.toISOString().slice(0, 19).replace('T', ' ');\n    msg.payload[i].stat.statusChanged = msg.payload[i].stat.statusChanged.toISOString().slice(0, 19).replace('T', ' ');\n//  msg.payload[i].fname = (msg.payload[i].stat.isFile?\"\":\"[\") + msg.payload[i].name.replace(/^.*(\\\\|\\/|\\:)/, '')+(msg.payload[i].stat.isFile?\"\":\"]\");\n    msg.payload[i].fname = (msg.payload[i].stat.isFile ? \"\" : \"<b>[\") + msg.payload[i].name.replace(/^.*(\\\\|\\/|\\:)/, '') + (msg.payload[i].stat.isFile ? \"\" : \"]</b>\");\n//  msg.payload[i].link = msg.payload[i].stat.isDirectory ? \"\" : \"/download?filename=\" + msg.payload[i].name;\n    msg.payload[i].link = msg.payload[i].stat.isDirectory ? \"\" : \"<a href=\\\"/download?filename=\" + msg.payload[i].name + \"\\\"><img src=\\\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACf0lEQVR42mNkwAE0ApLF/wqIKwOZ/5k/vLxzY8Pc19jUMaILGPdsjfik4VDy5ieD0X+oPBPQEBF2htN8Nw50nynxXoPVADEzVw6himVLX/znCmLAAyQZv6142xEV/+rU7l8oBiitfrn2HRMPXDPQVgZWJgj797//DP+QHCv878uyu6Hi0XADJKuXR3438luGbJO7GAPDbP2/YHbqsc8MO7/wAVUzweW5zm0KetYauR5sgPCiJ2f/cgsa4TIg7fA7hl1vWRj+cfIDnQYxhPnL22Nv4+WsGZnldSR4+048AxrPCHOSuzgDg6nAf4ZUuX9gxbOvfWI49/4fw643TAy/OaCG/P//73ORmSgji56TDU/95sPItjuLMjDM1PvLwAZ18a+//xmyj31g2PcWKMDMzPCbnRfsnS/1nqaMzFrWtrzNuw6hhzbMEKBNYM37gZoZmRghbmRiZvjFxs3wqcrZjJFRQEKab86dx4yMjIyYhvxnYPnyjmH/G0awZogSKM3I+O9FmpY4WISn68h5FmVDfZAmTmYGBjvh/3BDmP7+YWD++xOs6cCL3wx/gBEMYv++dfrU63pfc7CtrFZB8dxFixaAwpGf5R9DtsRnRKwDxRih9NQ7fxl+MjCDDXjbEx/x48yOlTB1zFxFi9azWQf7gvzM+O8vA8uvL+DEBFIMcTHC+d8Or177fmpOGFDgH8LfrOx8XDkzl7Jah/iAFf//x8D2+xsDM5CGRTBU8/r3MwrjGP7+/oItM7GymvvFs/sX5DGrmWqDgo7t7w8Glr+///2+ffrS501TJ/44u3MJUN0fnLkRCtgYuQXkmMQVlBj+A93y8v7d/98+PgElCXSFAKXm39j74So1AAAAAElFTkSuQmCC\\\" /></a>\";\n}\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 160,
-        "wires": [
-            [
-                "3cf065dcb5f51e0a"
-            ]
-        ]
-    },
-    {
-        "id": "6742cb8d35fcebbf",
-        "type": "ui_table",
-        "z": "80753dc5e0097563",
-        "group": "160e81fb.f1c86e",
-        "name": "",
-        "order": 10,
-        "width": 16,
-        "height": "10",
-        "columns": [
-            {
-                "field": "fname",
-                "title": "Name",
-                "width": "55%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "stat.size",
-                "title": "Size",
-                "width": "",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "stat.created",
-                "title": "Created",
-                "width": "15%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "stat.changed",
-                "title": "Changed",
-                "width": "15%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "link",
-                "title": "",
-                "width": "1%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            }
-        ],
-        "outputs": 1,
-        "cts": true,
-        "x": 470,
-        "y": 40,
-        "wires": [
-            [
-                "d89603c073b2d4ef",
-                "326fdc3f56ad8943"
-            ]
-        ]
-    },
-    {
-        "id": "1cd765bfd4781755",
-        "type": "debug",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1130,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "3cf065dcb5f51e0a",
-        "type": "sort",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "order": "ascending",
-        "as_num": false,
-        "target": "payload",
-        "targetType": "msg",
-        "msgKey": "$lowercase(fname)\t",
-        "msgKeyType": "jsonata",
-        "seqKey": "payload",
-        "seqKeyType": "msg",
-        "x": 310,
-        "y": 100,
-        "wires": [
-            [
-                "6742cb8d35fcebbf",
-                "f4acb30183741496"
-            ]
-        ]
-    },
-    {
-        "id": "d89603c073b2d4ef",
-        "type": "switch",
-        "z": "80753dc5e0097563",
-        "name": "is file?",
-        "property": "payload.stat.isFile",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 630,
-        "y": 100,
-        "wires": [
-            [
-                "c9a5f25a7c05b8fd"
-            ],
-            [
-                "666b6b8298de4314"
-            ]
-        ]
-    },
-    {
-        "id": "1c91b694fd6e7cd6",
-        "type": "yaml",
-        "z": "80753dc5e0097563",
-        "property": "payload",
-        "name": "",
-        "x": 810,
-        "y": 40,
-        "wires": [
-            [
-                "b004b2479b51a1f5"
-            ]
-        ]
-    },
-    {
-        "id": "b004b2479b51a1f5",
-        "type": "ui_template",
-        "z": "80753dc5e0097563",
-        "group": "26e8fe8026c92abb",
-        "name": "Properties",
-        "order": 1,
-        "width": 6,
-        "height": "7",
-        "format": "<textarea rows=\"21\">{{msg.payload}}</textarea>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 950,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "dac9d62e8382318f",
-        "type": "inject",
-        "z": "80753dc5e0097563",
-        "name": "selectable",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "ui_control",
-                "v": "{\"tabulator\":{\"selectable\":1}}",
-                "vt": "json"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "x": 130,
-        "y": 40,
-        "wires": [
-            [
-                "6742cb8d35fcebbf"
-            ]
-        ]
-    },
-    {
-        "id": "88bd42ca560d1684",
-        "type": "file in",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "filename": "",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 820,
-        "y": 160,
-        "wires": [
-            [
-                "45b95d41284afbb3"
-            ]
-        ]
-    },
-    {
-        "id": "45b95d41284afbb3",
-        "type": "ui_template",
-        "z": "80753dc5e0097563",
-        "group": "4128a70510a0cd4e",
-        "name": "Preview",
-        "order": 1,
-        "width": 6,
-        "height": "11",
-        "format": "<textarea rows=\"30\">{{msg.payload}}</textarea>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 960,
-        "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "326fdc3f56ad8943",
-        "type": "change",
-        "z": "80753dc5e0097563",
-        "name": "clean",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "payload.link",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "payload.fname",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 630,
-        "y": 40,
-        "wires": [
-            [
-                "1c91b694fd6e7cd6"
-            ]
-        ]
-    },
-    {
-        "id": "10fc281d3f4c07cf",
-        "type": "ui_chart",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "group": "26e8fe8026c92abb",
-        "order": 2,
-        "width": 6,
-        "height": "4",
-        "label": "File sizes",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "4",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 640,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6b7f5805f5bd8e2b",
-        "type": "change",
-        "z": "80753dc5e0097563",
-        "name": "graph",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "payload.fname",
-                "tot": "msg"
-            },
-            {
-                "t": "move",
-                "p": "payload.stat.size",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 630,
-        "y": 160,
-        "wires": [
-            [
-                "10fc281d3f4c07cf"
-            ]
-        ]
-    },
-    {
-        "id": "f4acb30183741496",
-        "type": "split",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 470,
-        "y": 100,
-        "wires": [
-            [
-                "6b7f5805f5bd8e2b"
-            ]
-        ]
-    },
-    {
-        "id": "e2ea19c4915e13bc",
-        "type": "inject",
-        "z": "80753dc5e0097563",
-        "name": "",
-        "props": [],
-        "repeat": "",
-        "crontab": "*/1 0-23 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 110,
-        "y": 100,
-        "wires": [
-            [
-                "413008d4e7b3e368"
-            ]
-        ]
     }
 ]

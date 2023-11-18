@@ -22,8 +22,8 @@ An automation server based on [Node-RED](http://nodered.org), [PM2](https://pm2.
 * Enter the user name password you gave at setup (these can be seen/changed in the Heroku app Environment vars)
 
 ## 4. Test the cloud service.
-* Use the **[appname].herokuapp.com/** path to try out the 'Hello World' home page.
-* Use the **[appname].herokuapp.com/api** path to try out the demo REST api end-point.
+* Use the **[appname].herokuapp.com/**  url in your browser to try out the 'Hello World' home page.
+* Use the **[appname].herokuapp.com/api**  url in your browser to try out the demo REST api end-point.
 
 ## 5. Create you first cloud end-point
 * Select and copy the 3 nodes which form the existing 'api' service and paste them into the main tab.

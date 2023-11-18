@@ -1,5 +1,5 @@
 # nodered-heroku
-An automation server based on [Node-RED](http://nodered.org), [PM2](https://pm2.keymetrics.io/) running on [Heroku](https://www.heroku.com).
+An easy to use, scalable HTTP service based on [Node-RED](http://nodered.org) and [PM2](https://pm2.keymetrics.io/) running on [Heroku](https://www.heroku.com).
 
 
 ## 1. Deploying to Heroku

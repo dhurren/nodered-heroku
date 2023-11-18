@@ -17,13 +17,13 @@ An automation server based on [Node-RED](http://nodered.org), [PM2](https://pm2.
 * Set GitHub as the deploy source on the app's 'Deploy' tab and point it at this repo or a forked version of this repo (do not enable automatic deploys).
 * Restart the Dyno (use 'Restart All Dynos' option), and you should see the Node-Red welcome page when you click the 'Open App' button.
 
-## 3. Access Node-Red editor on Cloud
-* Flow Editor - Use the **/editor** path to access the editor
-* Enter the user name password you gave at setup (these can be seen/changed in the Heroku app Environment vars)
-
-## 4. Test the cloud service.
+## 3. Test the cloud service.
 * Use the **[appname].herokuapp.com/**  url in your browser to try out the 'Hello World' home page.
 * Use the **[appname].herokuapp.com/api**  url in your browser to try out the demo REST api end-point.
+* 
+## 4. Access Node-Red editor on Cloud
+* Flow Editor - Use the **[appname].herokuapp.com/editor** path to access the editor
+* Enter the user name password you gave at setup (these can be seen/changed in the Heroku app Environment vars)
 
 ## 5. Create you first cloud end-point
 * Select and copy the 3 nodes which form the existing 'api' service and paste them into the main tab.

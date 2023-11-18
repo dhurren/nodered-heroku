@@ -6,7 +6,7 @@ var app = require('express')();
 var redport = (parseInt(process.env.PORT) + 1) 
 console.log( "node red port=" + redport ) 
 
-var instances = parseInt( process.env.INSTANCES ? process.env.INSTANCES : 1 )
+var instances = parseInt( process.env.NODE_RED_INSTANCES ? process.env.NODE_RED_INSTANCES : 1 )
 console.log( "instances = " + instances ) 
 var instance = 0
 

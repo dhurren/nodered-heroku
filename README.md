@@ -1,47 +1,40 @@
 # nodered-heroku
-A wrapper for deploying [Node-RED](http://nodered.org) into the [Heroku](https://www.heroku.com).
-* DEMO: Flow Editor - [https://nodered-heroku.herokuapp.com/editor](https://nodered-heroku.herokuapp.com/editor)
-* DEMO: Dashboard UI - [https://nodered-heroku.herokuapp.com](https://nodered-heroku.herokuapp.com)
+An automation server based on [Node-RED](http://nodered.org), [PM2](https://pm2.keymetrics.io/) running on [Heroku](https://www.heroku.com).
 
 
-## Warning: Heroku doesn't automatically save flows, credentials and installed nodes
-```
-[TL,DR] Use the SAVE Inject node in the first flow (see step 5).
-```
-To overcome this, after having deployed the new flows, export All flows as *flows.json* file, and push it to the GitHub repo linked to Heroku. Do the same with *flows_cred.json* and *package.json* for credentials and nodes installed in Palette. Detail on step 5.
-
-## 1. Deploying Node-RED to Heroku 
+## 1. Deploying to Heroku
+* Login to your Heroku account then press this button.
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/dhurren/nodered-heroku)
 
-## 2. Set up GitHub repo and Heroku app
-* Fork this GitHub repo.
-* Set GitHub as deploy source on Heroku setting. 
-* Enable Automatic Deployment, so that every time any file is pushed to GitHub repo, Heroku will rebuild Node-RED with updated files.
-
-## 3. Password protect the flow editor
-Set username and password for Node-RED Flow Editor:
+* When prompted, set username and password for Node-RED Flow Editor:
 * **NODE_RED_USERNAME** - the username to secure the Flow Editor with
 * **NODE_RED_PASSWORD** - the password to secure the Flow Editor with
+* (Note: Intially the app won't run as it requires an S3 bucket)
+  
+## 2. Configuring the Heroku App
+* Add the Heroku Bucketeer(S3 bucket) service to the app (one S3 service can be shared between apps by going to another app that
+  uses Bucketeer and selecting the 'resources' tab, then clicking on the 'attachments' option).
+* Set GitHub as the deploy source on the app's 'Deploy' tab and point it at this repo or a forked version of this repo (do not enable automatic deploys).
+* Restart the Dyno (use 'Restart All Dynos' option), and you should see the Node-Red welcome page when you click the 'Open App' button.
 
-## 4. Access Node-Red on Cloud
-* Flow Editor - [nodered-on-cloud.herokuapp.com/editor](https://nodered-on-cloud.herokuapp.com/editor)
-* Dashboard UI - [nodered-on-cloud.herokuapp.com/ui](https://nodered-on-cloud.herokuapp.com/ui)
-* Home page - [nodered-on-cloud.herokuapp.com](https://nodered-on-cloud.herokuapp.com)
+## 3. Access Node-Red editor on Cloud
+* Flow Editor - Use the **/editor** path to access the editor
+* Enter the user name password you gave at setup (these can be seen/changed in the Heroku app Environment vars)
 
-## 5. Export all flows, credentials and installed nodes
-### Manual mode (original)
-* In Editor, to export *flows.json*, click hamburger icon `☰` (top right), click Export, choose tab "All flows", then Download.
-* To export all the other files, browse the <i>/app</i> folder, e.g., with this [flow](https://flows.nodered.org/flow/44bc7ad491aacb4253dd8a5f757b5407) or the [modified version](utils/file-explorer-flow.json), and download all files.
-* Push *flows.json*, *flows_cred.json*, *package.json* to GitHub, so that Node-RED is rebuilt with the latest files at Heroku restart.
-### Alternative mode (recommended)
-* Use the `SAVE` Inject node in the [first flow](utils/save-all-changes-flow.json) to directly push all files to GitHub.
+## 4. Test the cloud service.
+* Use the **/instance1/test** path to try out the default 'Hello World' test HTTP end-point.
 
-![SAVE](public/images/save-button.png)
+## 5. Create you first cloud end-point
+* Select and copy the 3 nodes which form the existing 'test' service and paste them into the main tab.
+* Double-click on the first node and modify the end-point path from '/test' to '/hello'
+* Modify the end-point response by editing the text set in the second node.
+* Switch to the 'Admin' tab and press the 'SAVE' inject node (Saves the changes to the S3 bucket)
+* Test the new end-point in another browser tab by using the **/instance1/hello** path.
 
-## Some included nodes
-* Dashboard UI - node-red-dashboard
-* MQTT - node-red-contrib-aedes
-* Blynk Cloud - node-red-contrib-blynk-ws
-* Email - node-red-node-email
-* Telegram - node-red-contrib-telegrambot-home
-* InfluxDB, MongoDB, Modbus, OPC UA, Netatmo, PostgresSQL, Wordmap, etc. 
+## Adding new Node-Red nodes to the pallet.
+* Test your chosen node in the normal way by adding it to the node-red pallet.
+   Note: that pallet node will be unavalable in 24hrs when your Heroku app restarts unless you do the following -
+* Fork this repo and attach your Heroku app to that instead of this repo.
+* Modify the package.json file to include the npm package for that node.
+* Re-deploy your Heroku app from your new forked github repo.
+  

@@ -38,3 +38,10 @@ An automation server based on [Node-RED](http://nodered.org), [PM2](https://pm2.
 * Modify the package.json file to include the npm package for that node.
 * Re-deploy your Heroku app from your new forked github repo.
   
+## Increasing the number of node-red instances running.
+* Once you are happy that your app is running properly, you may want to increase the instance count to get the most out of your Heroku dyno.
+* Edit the pm2.json file and increase the number of node-red instances to 2 or 3.
+* In Heroku edit your app's config vars to include NODE_RED_INSTANCES with the same number you used in the pm2.json file.
+* Restart all Dynos.
+
+  

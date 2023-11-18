@@ -5,6 +5,9 @@ var app = require('express')();
 
 var redport = (parseInt(process.env.PORT) + 1) 
 console.log( "node red port=" + redport ) 
+
+var instances = parseInt( process.env.INSTANCES ? process.env.INSTANCES : 1 )
+console.log( "instances = " + instances ) 
 var instance = 0
 
 const wsProxy = createProxyMiddleware({ 
@@ -26,7 +29,8 @@ const wsProxy = createProxyMiddleware({
         else if( req.url.startsWith("/instance2") ) i = 1
         else if( req.url.startsWith("/instance3") ) i = 2
         else { 
-            if( instance++==2 ) instance = 0; 
+            //Round robin.
+            if( instance++==(instances-1) ) instance = 0; 
             i = instance 
         }
 
